@@ -1,4 +1,4 @@
-![](https://github.com/madebyhilmi/sanctuary/blob/master/images/logo-nt.png)
+<img src="https://github.com/madebyhilmi/sanctuary/blob/master/images/logo-nt.png" width="100" height="100"> 
 
 # Project Sanctuary
 ### A meaningful take on online dating
