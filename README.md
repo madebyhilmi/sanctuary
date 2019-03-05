@@ -1,4 +1,4 @@
-
+![](https://github.com/madebyhilmi/sanctuary/blob/master/images/logo-nt.png)
 
 # Project Sanctuary
 ### A meaningful take on online dating
