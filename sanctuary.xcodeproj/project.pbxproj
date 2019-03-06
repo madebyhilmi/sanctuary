@@ -570,7 +570,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JZ3M3A2VKE;
+				DEVELOPMENT_TEAM = J72UD4G24Z;
 				INFOPLIST_FILE = sanctuary/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -589,7 +589,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JZ3M3A2VKE;
+				DEVELOPMENT_TEAM = J72UD4G24Z;
 				INFOPLIST_FILE = sanctuary/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
