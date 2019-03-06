@@ -99,7 +99,6 @@
 				E15C14453AABAC022C01B713 /* Pods-sanctuaryUITests.debug.xcconfig */,
 				2D8683B1D783F0BB0E2DED6F /* Pods-sanctuaryUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -111,6 +110,28 @@
 				D4B1133A05E3E19E475AFD12 /* Pods_sanctuaryUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AC7240BA2230920300E769FE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AC7240BB2230920900E769FE /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AC7240BC2230932600E769FE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AC96F03D222EEDD100EE3D30 /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		AC96F02F222EEDD100EE3D30 = {
@@ -138,8 +159,10 @@
 		AC96F03A222EEDD100EE3D30 /* sanctuary */ = {
 			isa = PBXGroup;
 			children = (
+				AC7240BC2230932600E769FE /* Controller */,
+				AC7240BB2230920900E769FE /* View */,
+				AC7240BA2230920300E769FE /* Model */,
 				AC96F03B222EEDD100EE3D30 /* AppDelegate.swift */,
-				AC96F03D222EEDD100EE3D30 /* ViewController.swift */,
 				AC96F03F222EEDD100EE3D30 /* Main.storyboard */,
 				AC96F042222EEDD300EE3D30 /* Assets.xcassets */,
 				AC96F044222EEDD300EE3D30 /* LaunchScreen.storyboard */,
