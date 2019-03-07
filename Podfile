@@ -6,7 +6,8 @@ target 'sanctuary' do
   use_frameworks!
 
   # Pods for sanctuary
-
+  pod 'JVFloatLabeledTextField'
+  pod 'SkyFloatingLabelTextField', '~> 3.0'
   target 'sanctuaryTests' do
     inherit! :search_paths
     # Pods for testing
