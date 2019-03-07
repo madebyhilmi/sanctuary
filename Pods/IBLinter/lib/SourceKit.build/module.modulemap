@@ -1,0 +1,4 @@
+module SourceKit {
+    umbrella header "/Users/travis/build/IBDecodable/IBLinter/.build/checkouts/SourceKitten.git-6484296299232452758/Source/SourceKit/include/SourceKit.h"
+    export *
+}

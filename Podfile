@@ -7,6 +7,8 @@ target 'sanctuary' do
 
   # Pods for sanctuary
   pod 'JVFloatLabeledTextField'
+  pod 'IBLinter'
+  pod 'SwiftLint'
   pod 'SkyFloatingLabelTextField', '~> 3.0'
   target 'sanctuaryTests' do
     inherit! :search_paths
