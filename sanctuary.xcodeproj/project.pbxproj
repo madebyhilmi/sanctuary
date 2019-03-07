@@ -8,8 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		9EE3D4D4E1864DE7671AD1EF /* Pods_sanctuaryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65FE783D71E5A5C0CD3AAAC2 /* Pods_sanctuaryTests.framework */; };
+		AC7240BE223096CE00E769FE /* ReadyScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7240BD223096CE00E769FE /* ReadyScreenViewController.swift */; };
+		AC7240C02230978A00E769FE /* WelcomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7240BF2230978A00E769FE /* WelcomeScreenViewController.swift */; };
+		AC7240C2223097FE00E769FE /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7240C1223097FE00E769FE /* ChatViewController.swift */; };
+		AC7240C42230980700E769FE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7240C32230980700E769FE /* ProfileViewController.swift */; };
+		AC7240C62230993A00E769FE /* FirstLaunch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC7240C52230993A00E769FE /* FirstLaunch.storyboard */; };
 		AC96F03C222EEDD100EE3D30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC96F03B222EEDD100EE3D30 /* AppDelegate.swift */; };
-		AC96F03E222EEDD100EE3D30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC96F03D222EEDD100EE3D30 /* ViewController.swift */; };
+		AC96F03E222EEDD100EE3D30 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC96F03D222EEDD100EE3D30 /* SplashScreenViewController.swift */; };
 		AC96F041222EEDD100EE3D30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC96F03F222EEDD100EE3D30 /* Main.storyboard */; };
 		AC96F043222EEDD300EE3D30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC96F042222EEDD300EE3D30 /* Assets.xcassets */; };
 		AC96F046222EEDD300EE3D30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC96F044222EEDD300EE3D30 /* LaunchScreen.storyboard */; };
@@ -40,9 +45,14 @@
 		2D8683B1D783F0BB0E2DED6F /* Pods-sanctuaryUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sanctuaryUITests.release.xcconfig"; path = "Target Support Files/Pods-sanctuaryUITests/Pods-sanctuaryUITests.release.xcconfig"; sourceTree = "<group>"; };
 		65FE783D71E5A5C0CD3AAAC2 /* Pods_sanctuaryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sanctuaryTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		69271C2D82D9A29DD29CC638 /* Pods_sanctuary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sanctuary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC7240BD223096CE00E769FE /* ReadyScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadyScreenViewController.swift; sourceTree = "<group>"; };
+		AC7240BF2230978A00E769FE /* WelcomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreenViewController.swift; sourceTree = "<group>"; };
+		AC7240C1223097FE00E769FE /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		AC7240C32230980700E769FE /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		AC7240C52230993A00E769FE /* FirstLaunch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FirstLaunch.storyboard; sourceTree = "<group>"; };
 		AC96F038222EEDD100EE3D30 /* sanctuary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sanctuary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC96F03B222EEDD100EE3D30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AC96F03D222EEDD100EE3D30 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AC96F03D222EEDD100EE3D30 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
 		AC96F040222EEDD100EE3D30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AC96F042222EEDD300EE3D30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC96F045222EEDD300EE3D30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -129,7 +139,11 @@
 		AC7240BC2230932600E769FE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				AC96F03D222EEDD100EE3D30 /* ViewController.swift */,
+				AC96F03D222EEDD100EE3D30 /* SplashScreenViewController.swift */,
+				AC7240BD223096CE00E769FE /* ReadyScreenViewController.swift */,
+				AC7240BF2230978A00E769FE /* WelcomeScreenViewController.swift */,
+				AC7240C1223097FE00E769FE /* ChatViewController.swift */,
+				AC7240C32230980700E769FE /* ProfileViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -167,6 +181,7 @@
 				AC96F042222EEDD300EE3D30 /* Assets.xcassets */,
 				AC96F044222EEDD300EE3D30 /* LaunchScreen.storyboard */,
 				AC96F047222EEDD300EE3D30 /* Info.plist */,
+				AC7240C52230993A00E769FE /* FirstLaunch.storyboard */,
 			);
 			path = sanctuary;
 			sourceTree = "<group>";
@@ -296,6 +311,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC7240C62230993A00E769FE /* FirstLaunch.storyboard in Resources */,
 				AC96F046222EEDD300EE3D30 /* LaunchScreen.storyboard in Resources */,
 				AC96F043222EEDD300EE3D30 /* Assets.xcassets in Resources */,
 				AC96F041222EEDD100EE3D30 /* Main.storyboard in Resources */,
@@ -392,7 +408,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC96F03E222EEDD100EE3D30 /* ViewController.swift in Sources */,
+				AC7240C42230980700E769FE /* ProfileViewController.swift in Sources */,
+				AC96F03E222EEDD100EE3D30 /* SplashScreenViewController.swift in Sources */,
+				AC7240C02230978A00E769FE /* WelcomeScreenViewController.swift in Sources */,
+				AC7240BE223096CE00E769FE /* ReadyScreenViewController.swift in Sources */,
+				AC7240C2223097FE00E769FE /* ChatViewController.swift in Sources */,
 				AC96F03C222EEDD100EE3D30 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
