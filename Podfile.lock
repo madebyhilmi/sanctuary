@@ -1,3 +1,16 @@
-PODFILE CHECKSUM: b9a40dd939421b4b999f7825e7f476ef59d3b70c
+PODS:
+  - JVFloatLabeledTextField (1.2.1)
+
+DEPENDENCIES:
+  - JVFloatLabeledTextField
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - JVFloatLabeledTextField
+
+SPEC CHECKSUMS:
+  JVFloatLabeledTextField: cfc44e3c4d493b2ed92ede8035e8e89c2912ba64
+
+PODFILE CHECKSUM: 27d1904a77838b332aa2955f588e2b0a0943d410
 
 COCOAPODS: 1.6.1
