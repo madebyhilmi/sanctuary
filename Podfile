@@ -10,6 +10,7 @@ target 'sanctuary' do
   pod 'IBLinter'
   pod 'SwiftLint'
   pod 'SkyFloatingLabelTextField', '~> 3.0'
+  pod 'PhoneNumberKit', '~> 2.6'
   target 'sanctuaryTests' do
     inherit! :search_paths
     # Pods for testing

@@ -20,6 +20,15 @@
 		AC96F046222EEDD300EE3D30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC96F044222EEDD300EE3D30 /* LaunchScreen.storyboard */; };
 		AC96F051222EEDD300EE3D30 /* sanctuaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC96F050222EEDD300EE3D30 /* sanctuaryTests.swift */; };
 		AC96F05C222EEDD300EE3D30 /* sanctuaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC96F05B222EEDD300EE3D30 /* sanctuaryUITests.swift */; };
+		ACF4F08A223718640042283F /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF4F089223718640042283F /* Profile.swift */; };
+		ACF4F08C2237195C0042283F /* Icebreaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF4F08B2237195C0042283F /* Icebreaker.swift */; };
+		ACF4F08E22371A6C0042283F /* TwoTruthsOneLieIcebreaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF4F08D22371A6C0042283F /* TwoTruthsOneLieIcebreaker.swift */; };
+		ACF4F09122371E250042283F /* PhoneNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF4F09022371E250042283F /* PhoneNumberViewController.swift */; };
+		ACF4F09322371E540042283F /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF4F09222371E540042283F /* NameViewController.swift */; };
+		ACF4F09522371E600042283F /* GenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF4F09422371E600042283F /* GenderViewController.swift */; };
+		ACF4F09722371E780042283F /* DOBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF4F09622371E780042283F /* DOBViewController.swift */; };
+		ACF4F09922371EA60042283F /* ProfilePicturePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF4F09822371EA60042283F /* ProfilePicturePickerViewController.swift */; };
+		ACF4F09B22371EBC0042283F /* IcebreakerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF4F09A22371EBC0042283F /* IcebreakerViewController.swift */; };
 		F9DEE671519C6D3649D5529E /* Pods_sanctuary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69271C2D82D9A29DD29CC638 /* Pods_sanctuary.framework */; };
 		FC1A2D997FC93C49D0CDB901 /* Pods_sanctuaryUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4B1133A05E3E19E475AFD12 /* Pods_sanctuaryUITests.framework */; };
 /* End PBXBuildFile section */
@@ -63,6 +72,15 @@
 		AC96F057222EEDD300EE3D30 /* sanctuaryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sanctuaryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC96F05B222EEDD300EE3D30 /* sanctuaryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sanctuaryUITests.swift; sourceTree = "<group>"; };
 		AC96F05D222EEDD300EE3D30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACF4F089223718640042283F /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		ACF4F08B2237195C0042283F /* Icebreaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icebreaker.swift; sourceTree = "<group>"; };
+		ACF4F08D22371A6C0042283F /* TwoTruthsOneLieIcebreaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoTruthsOneLieIcebreaker.swift; sourceTree = "<group>"; };
+		ACF4F09022371E250042283F /* PhoneNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberViewController.swift; sourceTree = "<group>"; };
+		ACF4F09222371E540042283F /* NameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
+		ACF4F09422371E600042283F /* GenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderViewController.swift; sourceTree = "<group>"; };
+		ACF4F09622371E780042283F /* DOBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DOBViewController.swift; sourceTree = "<group>"; };
+		ACF4F09822371EA60042283F /* ProfilePicturePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePicturePickerViewController.swift; sourceTree = "<group>"; };
+		ACF4F09A22371EBC0042283F /* IcebreakerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IcebreakerViewController.swift; sourceTree = "<group>"; };
 		B00D9840F0DB99F878F7F6BA /* Pods-sanctuaryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sanctuaryTests.release.xcconfig"; path = "Target Support Files/Pods-sanctuaryTests/Pods-sanctuaryTests.release.xcconfig"; sourceTree = "<group>"; };
 		D4B1133A05E3E19E475AFD12 /* Pods_sanctuaryUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sanctuaryUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E15C14453AABAC022C01B713 /* Pods-sanctuaryUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sanctuaryUITests.debug.xcconfig"; path = "Target Support Files/Pods-sanctuaryUITests/Pods-sanctuaryUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -125,6 +143,9 @@
 		AC7240BA2230920300E769FE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				ACF4F089223718640042283F /* Profile.swift */,
+				ACF4F08B2237195C0042283F /* Icebreaker.swift */,
+				ACF4F08D22371A6C0042283F /* TwoTruthsOneLieIcebreaker.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -139,6 +160,7 @@
 		AC7240BC2230932600E769FE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				ACF4F08F22371DE50042283F /* FirstLaunch */,
 				AC96F03D222EEDD100EE3D30 /* SplashScreenViewController.swift */,
 				AC7240BD223096CE00E769FE /* ReadyScreenViewController.swift */,
 				AC7240BF2230978A00E769FE /* WelcomeScreenViewController.swift */,
@@ -173,9 +195,9 @@
 		AC96F03A222EEDD100EE3D30 /* sanctuary */ = {
 			isa = PBXGroup;
 			children = (
-				AC7240BC2230932600E769FE /* Controller */,
-				AC7240BB2230920900E769FE /* View */,
 				AC7240BA2230920300E769FE /* Model */,
+				AC7240BB2230920900E769FE /* View */,
+				AC7240BC2230932600E769FE /* Controller */,
 				AC96F03B222EEDD100EE3D30 /* AppDelegate.swift */,
 				AC96F03F222EEDD100EE3D30 /* Main.storyboard */,
 				AC96F042222EEDD300EE3D30 /* Assets.xcassets */,
@@ -202,6 +224,19 @@
 				AC96F05D222EEDD300EE3D30 /* Info.plist */,
 			);
 			path = sanctuaryUITests;
+			sourceTree = "<group>";
+		};
+		ACF4F08F22371DE50042283F /* FirstLaunch */ = {
+			isa = PBXGroup;
+			children = (
+				ACF4F09022371E250042283F /* PhoneNumberViewController.swift */,
+				ACF4F09222371E540042283F /* NameViewController.swift */,
+				ACF4F09422371E600042283F /* GenderViewController.swift */,
+				ACF4F09622371E780042283F /* DOBViewController.swift */,
+				ACF4F09822371EA60042283F /* ProfilePicturePickerViewController.swift */,
+				ACF4F09A22371EBC0042283F /* IcebreakerViewController.swift */,
+			);
+			path = FirstLaunch;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -412,6 +447,7 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-sanctuary/Pods-sanctuary-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/JVFloatLabeledTextField/JVFloatLabeledTextField.framework",
+				"${BUILT_PRODUCTS_DIR}/PhoneNumberKit/PhoneNumberKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -419,6 +455,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JVFloatLabeledTextField.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PhoneNumberKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,10 +470,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACF4F09722371E780042283F /* DOBViewController.swift in Sources */,
+				ACF4F08C2237195C0042283F /* Icebreaker.swift in Sources */,
 				AC7240C42230980700E769FE /* ProfileViewController.swift in Sources */,
+				ACF4F09122371E250042283F /* PhoneNumberViewController.swift in Sources */,
 				AC96F03E222EEDD100EE3D30 /* SplashScreenViewController.swift in Sources */,
+				ACF4F09B22371EBC0042283F /* IcebreakerViewController.swift in Sources */,
 				AC7240C02230978A00E769FE /* WelcomeScreenViewController.swift in Sources */,
+				ACF4F08A223718640042283F /* Profile.swift in Sources */,
+				ACF4F09922371EA60042283F /* ProfilePicturePickerViewController.swift in Sources */,
+				ACF4F09322371E540042283F /* NameViewController.swift in Sources */,
 				AC7240BE223096CE00E769FE /* ReadyScreenViewController.swift in Sources */,
+				ACF4F08E22371A6C0042283F /* TwoTruthsOneLieIcebreaker.swift in Sources */,
+				ACF4F09522371E600042283F /* GenderViewController.swift in Sources */,
 				AC7240C2223097FE00E769FE /* ChatViewController.swift in Sources */,
 				AC96F03C222EEDD100EE3D30 /* AppDelegate.swift in Sources */,
 			);

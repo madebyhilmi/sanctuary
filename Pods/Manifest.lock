@@ -1,12 +1,19 @@
 PODS:
   - IBLinter (0.4.11)
   - JVFloatLabeledTextField (1.2.1)
+  - PhoneNumberKit (2.6.0):
+    - PhoneNumberKit/PhoneNumberKitCore (= 2.6.0)
+    - PhoneNumberKit/UIKit (= 2.6.0)
+  - PhoneNumberKit/PhoneNumberKitCore (2.6.0)
+  - PhoneNumberKit/UIKit (2.6.0):
+    - PhoneNumberKit/PhoneNumberKitCore
   - SkyFloatingLabelTextField (3.6.0)
   - SwiftLint (0.31.0)
 
 DEPENDENCIES:
   - IBLinter
   - JVFloatLabeledTextField
+  - PhoneNumberKit (~> 2.6)
   - SkyFloatingLabelTextField (~> 3.0)
   - SwiftLint
 
@@ -14,15 +21,17 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - IBLinter
     - JVFloatLabeledTextField
+    - PhoneNumberKit
     - SkyFloatingLabelTextField
     - SwiftLint
 
 SPEC CHECKSUMS:
   IBLinter: 5e6f6dc2b904b4904146a09933af19ba59380bfb
   JVFloatLabeledTextField: cfc44e3c4d493b2ed92ede8035e8e89c2912ba64
+  PhoneNumberKit: 167ee1f0bbb6efce7c62559e620eae745595532f
   SkyFloatingLabelTextField: 38164979b79512f9ff9288ad8acfc4bbf5d843e3
   SwiftLint: 7a0227733d786395817373b2d0ca799fd0093ff3
 
-PODFILE CHECKSUM: 3af64e5507f29e155e37b1fb3f0259b471c06276
+PODFILE CHECKSUM: e05af549a437d4a8db3c4e6ece68dfffef298548
 
 COCOAPODS: 1.6.1
