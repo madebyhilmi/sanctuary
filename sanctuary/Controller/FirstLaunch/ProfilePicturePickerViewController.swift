@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProfilePicturePickerViewController: UIViewController {
+class ProfilePicturePickerViewController: FirstLaunchViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,14 +17,18 @@ class ProfilePicturePickerViewController: UIViewController {
     }
     
 
-    /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "toPPPicked" {
+            if let destination = segue.destination as? SubViewController {
+                destination.profile = self.profile
+            }
+        }
     }
-    */
-
+    @IBAction func openCameraRoll(_ sender: Any) {
+        super.profile?.profilePic = UIImage(named: "jessica")!
+    }
+    
 }

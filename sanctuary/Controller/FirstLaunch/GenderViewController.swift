@@ -8,8 +8,10 @@
 
 import UIKit
 
-class GenderViewController: UIViewController {
+class GenderViewController: FirstLaunchViewController {
 
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,14 +19,29 @@ class GenderViewController: UIViewController {
     }
     
 
-    /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "toDOB" {
+            if let destination = segue.destination as? SubViewController {
+                destination.profile = self.profile
+            }
+        }
     }
-    */
+    
+    @IBAction func maleDidTouch(_ sender: Any) {
+        super.profile?.gender = "male"
+    }
+    @IBAction func femaleDidTouch(_ sender: Any) {
+        super.profile?.gender = "female"
+    }
+    @IBAction func nonbinaryDidTouch(_ sender: Any) {
+        super.profile?.gender = "nonbinary"
+    }
+    
 
+    
 }

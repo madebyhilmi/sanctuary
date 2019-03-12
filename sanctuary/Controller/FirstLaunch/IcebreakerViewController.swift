@@ -8,8 +8,13 @@
 
 import UIKit
 
-class IcebreakerViewController: UIViewController {
+class IcebreakerViewController: FirstLaunchViewController {
 
+
+    @IBOutlet weak var truthOneTextField: UITextField!
+    @IBOutlet weak var truthTwoTextField: UITextField!
+    @IBOutlet weak var lieTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,14 +22,24 @@ class IcebreakerViewController: UIViewController {
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "toStart" {
+            if let destination = segue.destination as? SubViewController {
+                destination.profile = self.profile
+            }
+        }
     }
-    */
+    @IBAction func doneDidPress(_ sender: Any) {
+        super.profile?.icebreaker.truthOne = truthOneTextField.text!
+        super.profile?.icebreaker.truthTwo = truthTwoTextField.text!
+        super.profile?.icebreaker.lie = lieTextField.text!
+
+        print("Lets see what we kept")
+    }
+    
 
 }
