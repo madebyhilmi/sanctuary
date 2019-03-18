@@ -435,8 +435,7 @@ Lets start off by getting your name!</string>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="openCameraRoll:" destination="SEp-EB-Wh7" eventType="touchUpInside" id="Vj0-lX-HIo"/>
-                                    <segue destination="vXj-wa-Ra6" kind="show" identifier="toPPPicked" id="hdH-ad-uh9"/>
+                                    <action selector="openCameraRoll:" destination="SEp-EB-Wh7" eventType="touchUpInside" id="una-Lv-6Ih"/>
                                 </connections>
                             </button>
                             <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="6" currentPage="4" translatesAutoresizingMaskIntoConstraints="NO" id="9F6-xq-lZN">
@@ -448,15 +447,18 @@ Lets start off by getting your name!</string>
                         <viewLayoutGuide key="safeArea" id="znP-ff-goa"/>
                     </view>
                     <navigationItem key="navigationItem" id="uZF-nc-w6f"/>
+                    <connections>
+                        <segue destination="vXj-wa-Ra6" kind="show" identifier="toPPPicked" id="Ad5-tM-Ukj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nFL-dm-5sY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3762" y="-222"/>
+            <point key="canvasLocation" x="3761" y="-222"/>
         </scene>
         <!--Profile Picture Picked View Controller-->
         <scene sceneID="hnu-qq-h5L">
             <objects>
-                <viewController id="2Os-Mt-SQp" customClass="ProfilePicturePickedViewController" customModule="sanctuary" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="pppicked" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2Os-Mt-SQp" customClass="ProfilePicturePickedViewController" customModule="sanctuary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ya8-h9-BT3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -495,6 +497,9 @@ Lets start off by getting your name!</string>
                         <viewLayoutGuide key="safeArea" id="Dj7-CD-GNX"/>
                     </view>
                     <navigationItem key="navigationItem" id="jOs-dF-zQt"/>
+                    <connections>
+                        <outlet property="profilePictureImageView" destination="OIu-G1-yOq" id="Uj7-g3-rYn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bp6-lF-aaW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -631,6 +636,7 @@ Lets start off by getting your name!</string>
                     <navigationItem key="navigationItem" id="dDW-vF-8ZM"/>
                     <connections>
                         <outlet property="lieTextField" destination="aHv-Ip-aqH" id="su4-Qz-glI"/>
+                        <outlet property="truthOneTextField" destination="h75-TN-RWN" id="GOJ-tu-xr5"/>
                         <outlet property="truthTwoTextField" destination="VBR-Ro-59t" id="2Qn-gx-0Ok"/>
                     </connections>
                 </viewController>

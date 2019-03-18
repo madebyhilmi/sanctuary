@@ -8,7 +8,8 @@
 
 import UIKit
 
-class ProfilePicturePickerViewController: FirstLaunchViewController {
+class ProfilePicturePickerViewController: FirstLaunchViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    var imagePicker = UIImagePickerController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +29,13 @@ class ProfilePicturePickerViewController: FirstLaunchViewController {
         }
     }
     @IBAction func openCameraRoll(_ sender: Any) {
-        super.profile?.profilePic = UIImage(named: "jessica")!
+        ImagePickerManager().pickImage(self){ image in
+            self.profile?.profilePic = image
+            self.performSegue(withIdentifier: "toPPPicked", sender: nil)
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "pppicked") as! ProfilePicturePickedViewController
+            vc.profile = self.profile
+            self.present(vc, animated: true, completion: nil)
+        }
     }
-    
+   
 }

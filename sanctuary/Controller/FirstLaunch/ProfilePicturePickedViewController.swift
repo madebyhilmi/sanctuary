@@ -10,10 +10,11 @@ import UIKit
 
 class ProfilePicturePickedViewController: FirstLaunchViewController {
 
+    @IBOutlet weak var profilePictureImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        profilePictureImageView.image = profile?.profilePic.circleMasked
     }
     
 

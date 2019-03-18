@@ -21,6 +21,8 @@
 		AC96F046222EEDD300EE3D30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC96F044222EEDD300EE3D30 /* LaunchScreen.storyboard */; };
 		AC96F051222EEDD300EE3D30 /* sanctuaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC96F050222EEDD300EE3D30 /* sanctuaryTests.swift */; };
 		AC96F05C222EEDD300EE3D30 /* sanctuaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC96F05B222EEDD300EE3D30 /* sanctuaryUITests.swift */; };
+		AC98D67E224012BE00DD7E86 /* ImagePickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC98D67D224012BE00DD7E86 /* ImagePickerManager.swift */; };
+		AC98D68022401ECD00DD7E86 /* UIImage+circular.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC98D67F22401ECD00DD7E86 /* UIImage+circular.swift */; };
 		ACF4F08A223718640042283F /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF4F089223718640042283F /* Profile.swift */; };
 		ACF4F08C2237195C0042283F /* Icebreaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF4F08B2237195C0042283F /* Icebreaker.swift */; };
 		ACF4F08E22371A6C0042283F /* TwoTruthsOneLieIcebreaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF4F08D22371A6C0042283F /* TwoTruthsOneLieIcebreaker.swift */; };
@@ -76,6 +78,8 @@
 		AC96F057222EEDD300EE3D30 /* sanctuaryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sanctuaryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC96F05B222EEDD300EE3D30 /* sanctuaryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sanctuaryUITests.swift; sourceTree = "<group>"; };
 		AC96F05D222EEDD300EE3D30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC98D67D224012BE00DD7E86 /* ImagePickerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerManager.swift; sourceTree = "<group>"; };
+		AC98D67F22401ECD00DD7E86 /* UIImage+circular.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+circular.swift"; sourceTree = "<group>"; };
 		ACF4F089223718640042283F /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		ACF4F08B2237195C0042283F /* Icebreaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icebreaker.swift; sourceTree = "<group>"; };
 		ACF4F08D22371A6C0042283F /* TwoTruthsOneLieIcebreaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoTruthsOneLieIcebreaker.swift; sourceTree = "<group>"; };
@@ -172,6 +176,7 @@
 				AC7240BF2230978A00E769FE /* WelcomeScreenViewController.swift */,
 				AC7240C1223097FE00E769FE /* ChatViewController.swift */,
 				AC7240C32230980700E769FE /* ProfileViewController.swift */,
+				AC98D67F22401ECD00DD7E86 /* UIImage+circular.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -244,6 +249,7 @@
 				ACF4F09A22371EBC0042283F /* IcebreakerViewController.swift */,
 				ACF4F09C223742280042283F /* SubViewController.swift */,
 				ACF4F09E2237444E0042283F /* FirstLaunchViewController.swift */,
+				AC98D67D224012BE00DD7E86 /* ImagePickerManager.swift */,
 			);
 			path = FirstLaunch;
 			sourceTree = "<group>";
@@ -485,6 +491,7 @@
 				ACF4F09122371E250042283F /* PhoneNumberViewController.swift in Sources */,
 				AC96F03E222EEDD100EE3D30 /* SplashScreenViewController.swift in Sources */,
 				ACF4F09B22371EBC0042283F /* IcebreakerViewController.swift in Sources */,
+				AC98D68022401ECD00DD7E86 /* UIImage+circular.swift in Sources */,
 				AC7240C02230978A00E769FE /* WelcomeScreenViewController.swift in Sources */,
 				ACF4F08A223718640042283F /* Profile.swift in Sources */,
 				ACF4F09F2237444E0042283F /* FirstLaunchViewController.swift in Sources */,
@@ -492,6 +499,7 @@
 				ACF4F09922371EA60042283F /* ProfilePicturePickerViewController.swift in Sources */,
 				ACF4F09322371E540042283F /* NameViewController.swift in Sources */,
 				AC7240BE223096CE00E769FE /* ReadyScreenViewController.swift in Sources */,
+				AC98D67E224012BE00DD7E86 /* ImagePickerManager.swift in Sources */,
 				ACF4F09D223742280042283F /* SubViewController.swift in Sources */,
 				ACF4F08E22371A6C0042283F /* TwoTruthsOneLieIcebreaker.swift in Sources */,
 				ACF4F09522371E600042283F /* GenderViewController.swift in Sources */,
