@@ -12,11 +12,12 @@ class ChatViewController: UITableViewController {
 
     fileprivate let cellId = "id"
     
-    let messages = [
-        "Hey everyone",
-        "Some really really long message that should span quite a few lines so that we can see what these bubbles will look like",
-        "Some really really long message that should span quite a few lines so that we can see what these bubbles will look like, Some really really long message that should span quite a few lines so that we can see what these bubbles will look like"
-        
+    let chatMessages = [
+        ChatMessage(text: "HEYEYEYEYEY", isIncoming: true),
+        ChatMessage(text: "Hey cow brains, hows it going?", isIncoming: false),
+        ChatMessage(text: "Hey cow brains, this is a very very long message, lets see how its going to split onto different lines", isIncoming: true),
+        ChatMessage(text: "Hey cow brains, hows it going?Hey cow brains, hows it going?Hey cow brains, hows it going?Hey cow brains, hows it going?", isIncoming: false)
+
     ]
     
     override func viewDidLoad() {
@@ -27,17 +28,17 @@ class ChatViewController: UITableViewController {
 
         tableView.register(ChatMessageCell.self, forCellReuseIdentifier: cellId)
         tableView.separatorStyle = .none
+        tableView.backgroundColor = .white
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-      return messages.count
+      return chatMessages.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId , for: indexPath) as! ChatMessageCell
-
-        cell.messageLabel.text = messages[indexPath.row]
+        cell.chatMessage = chatMessages[indexPath.row]
         return cell
     }
 
