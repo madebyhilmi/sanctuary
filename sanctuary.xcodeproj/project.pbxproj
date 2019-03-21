@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17FD927722432C3C0059B233 /* ChatMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FD927622432C3C0059B233 /* ChatMessageCell.swift */; };
 		9EE3D4D4E1864DE7671AD1EF /* Pods_sanctuaryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65FE783D71E5A5C0CD3AAAC2 /* Pods_sanctuaryTests.framework */; };
 		AC7240BE223096CE00E769FE /* ReadyScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7240BD223096CE00E769FE /* ReadyScreenViewController.swift */; };
 		AC7240C02230978A00E769FE /* WelcomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7240BF2230978A00E769FE /* WelcomeScreenViewController.swift */; };
@@ -56,6 +57,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		17FD927622432C3C0059B233 /* ChatMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMessageCell.swift; sourceTree = "<group>"; };
 		2D8683B1D783F0BB0E2DED6F /* Pods-sanctuaryUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sanctuaryUITests.release.xcconfig"; path = "Target Support Files/Pods-sanctuaryUITests/Pods-sanctuaryUITests.release.xcconfig"; sourceTree = "<group>"; };
 		65FE783D71E5A5C0CD3AAAC2 /* Pods_sanctuaryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sanctuaryTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		69271C2D82D9A29DD29CC638 /* Pods_sanctuary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sanctuary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -150,6 +152,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		17FD927522432C3C0059B233 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				17FD927622432C3C0059B233 /* ChatMessageCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		AC7240BA2230920300E769FE /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,13 +168,6 @@
 				ACF4F08D22371A6C0042283F /* TwoTruthsOneLieIcebreaker.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		AC7240BB2230920900E769FE /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		AC7240BC2230932600E769FE /* Controller */ = {
@@ -206,8 +209,8 @@
 		AC96F03A222EEDD100EE3D30 /* sanctuary */ = {
 			isa = PBXGroup;
 			children = (
+				17FD927522432C3C0059B233 /* View */,
 				AC7240BA2230920300E769FE /* Model */,
-				AC7240BB2230920900E769FE /* View */,
 				AC7240BC2230932600E769FE /* Controller */,
 				AC96F03B222EEDD100EE3D30 /* AppDelegate.swift */,
 				AC96F03F222EEDD100EE3D30 /* Main.storyboard */,
@@ -497,6 +500,7 @@
 				ACF4F09F2237444E0042283F /* FirstLaunchViewController.swift in Sources */,
 				AC7823BD223758B200132431 /* ProfilePicturePickedViewController.swift in Sources */,
 				ACF4F09922371EA60042283F /* ProfilePicturePickerViewController.swift in Sources */,
+				17FD927722432C3C0059B233 /* ChatMessageCell.swift in Sources */,
 				ACF4F09322371E540042283F /* NameViewController.swift in Sources */,
 				AC7240BE223096CE00E769FE /* ReadyScreenViewController.swift in Sources */,
 				AC98D67E224012BE00DD7E86 /* ImagePickerManager.swift in Sources */,

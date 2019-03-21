@@ -8,14 +8,38 @@
 
 import UIKit
 
-class ChatViewController: UIViewController {
+class ChatViewController: UITableViewController {
 
+    fileprivate let cellId = "id"
+    
+    let messages = [
+        "Hey everyone",
+        "Some really really long message that should span quite a few lines so that we can see what these bubbles will look like",
+        "Some really really long message that should span quite a few lines so that we can see what these bubbles will look like, Some really really long message that should span quite a few lines so that we can see what these bubbles will look like"
+        
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.title = "Chat"
+        navigationController?.navigationBar.prefersLargeTitles = true
 
-        // Do any additional setup after loading the view.
+        tableView.register(ChatMessageCell.self, forCellReuseIdentifier: cellId)
+        tableView.separatorStyle = .none
     }
     
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+      return messages.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId , for: indexPath) as! ChatMessageCell
+
+        cell.messageLabel.text = messages[indexPath.row]
+        return cell
+    }
 
     /*
     // MARK: - Navigation
