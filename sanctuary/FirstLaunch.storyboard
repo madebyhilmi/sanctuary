@@ -152,6 +152,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Toc-ba-aBg"/>
                     <connections>
+                        <outlet property="nextButton" destination="6kf-I3-YcX" id="QzU-7c-xpP"/>
                         <outlet property="phoneNumberTextField" destination="mEl-4h-uhM" id="EMh-SX-zXc"/>
                     </connections>
                 </viewController>
@@ -168,7 +169,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eqm-cg-QHA" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="37" y="453" width="295" height="30"/>
+                                <rect key="frame" x="37" y="455" width="295" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
@@ -194,6 +195,9 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Name"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onChange:" destination="g5R-F4-AYc" eventType="valueChanged" id="i32-2X-HNj"/>
+                                </connections>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bird-white" translatesAutoresizingMaskIntoConstraints="NO" id="2fd-sb-xz2">
                                 <rect key="frame" x="127" y="44" width="120" height="120"/>
@@ -237,7 +241,8 @@ Lets start off by getting your name!</string>
                     </view>
                     <navigationItem key="navigationItem" id="Ao6-aO-JoK"/>
                     <connections>
-                        <outlet property="nameTextField" destination="eqm-cg-QHA" id="F9g-hU-zqM"/>
+                        <outlet property="nameTextField" destination="eqm-cg-QHA" id="g61-un-rT6"/>
+                        <outlet property="nextButton" destination="N99-fQ-3eu" id="oP1-eb-7IY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yZG-FF-uul" userLabel="First Responder" sceneMemberID="firstResponder"/>

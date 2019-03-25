@@ -14,11 +14,14 @@ class PhoneNumberViewController: FirstLaunchViewController {
 
     
     @IBOutlet weak var phoneNumberTextField: SkyFloatingLabelTextField!
+    @IBOutlet weak var nextButton: UIButton!
     
     var phoneNumberKit: PhoneNumberKit?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        nextButton.isEnabled = false
+        nextButton.alpha = 0.5
         phoneNumberKit = PhoneNumberKit()
         phoneNumberTextField.addTarget(self, action: #selector(phoneNumberTextFieldDidChange(textField:)), for: .editingChanged)
 
@@ -55,6 +58,8 @@ class PhoneNumberViewController: FirstLaunchViewController {
             phoneNumberTextField.selectedTitleColor = UIColor.white
             phoneNumberTextField.selectedLineColor = UIColor.white
             phoneNumberTextField.textColor = UIColor.white
+            nextButton.isEnabled = true
+            nextButton.alpha = 1.0
             
         }
         catch {
@@ -65,6 +70,8 @@ class PhoneNumberViewController: FirstLaunchViewController {
             phoneNumberTextField.selectedTitleColor = UIColor(named: "orange")!
             phoneNumberTextField.selectedLineColor = UIColor(named: "orange")!
             phoneNumberTextField.textColor = UIColor(named: "orange")
+            nextButton.isEnabled = false
+            nextButton.alpha = 0.5
         }
     }
     

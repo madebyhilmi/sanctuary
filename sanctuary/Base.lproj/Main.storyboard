@@ -72,7 +72,7 @@
         <!--Ready Screen View Controller-->
         <scene sceneID="0lA-ld-l67">
             <objects>
-                <viewController id="hqQ-Mb-WYp" customClass="ReadyScreenViewController" customModule="sanctuary" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ReadyScreen" id="hqQ-Mb-WYp" customClass="ReadyScreenViewController" customModule="sanctuary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BET-L5-lcf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

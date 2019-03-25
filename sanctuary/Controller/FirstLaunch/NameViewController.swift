@@ -7,13 +7,20 @@
 //
 
 import UIKit
+import SkyFloatingLabelTextField
+
 
 class NameViewController: FirstLaunchViewController {
     
-    @IBOutlet weak var nameTextField: UITextField!
+    
+    @IBOutlet weak var nameTextField: SkyFloatingLabelTextField!
+    
+    @IBOutlet weak var nextButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        nextButton.isEnabled = false
+        nextButton.alpha = 0.5
         nameTextField.becomeFirstResponder()
         // Do any additional setup after loading the view.
     }
@@ -32,6 +39,30 @@ class NameViewController: FirstLaunchViewController {
         }
     }
 
+    @IBAction func onChange(_ sender: Any) {
+        if (nameTextField.text?.count)! < 1 {
+            nameTextField.placeholder = "Name"
+            nameTextField.title = "Invalid Name"
+            nameTextField.tintColor = UIColor(named: "orange")
+            nameTextField.selectedTitleColor = UIColor(named: "orange")!
+            nameTextField.selectedLineColor = UIColor(named: "orange")!
+            nameTextField.textColor = UIColor(named: "orange")
+            
+            nextButton.isEnabled = false
+            nextButton.alpha = 0.5
+        }else{
+            nameTextField.title = "Name"
+            nameTextField.tintColor = UIColor.white
+            nameTextField.selectedTitleColor = UIColor.white
+            nameTextField.selectedLineColor = UIColor.white
+            nameTextField.textColor = UIColor.white
+            
+            nextButton.isEnabled = true
+            nextButton.alpha = 1.0
+        }
+    }
+    
+    
     @IBAction func nextDidTouch(_ sender: Any) {
         super.profile!.name = nameTextField.text!
     }

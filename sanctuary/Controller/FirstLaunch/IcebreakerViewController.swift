@@ -38,7 +38,9 @@ class IcebreakerViewController: FirstLaunchViewController {
         super.profile?.icebreaker.truthTwo = truthTwoTextField.text!
         super.profile?.icebreaker.lie = lieTextField.text!
 
-        print("Lets see what we kept")
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "ReadyScreen") as UIViewController
+        present(vc, animated: true, completion: nil)
     }
     
 
