@@ -11,15 +11,15 @@ import UIKit
 class ChatViewController: UITableViewController {
 
     fileprivate let cellId = "id"
-    
-    let chatMessages = [
-        ChatMessage(text: "HEYEYEYEYEY", isIncoming: true),
-        ChatMessage(text: "Hey cow brains, hows it going?", isIncoming: false),
-        ChatMessage(text: "Hey cow brains, this is a very very long message, lets see how its going to split onto different lines", isIncoming: true),
-        ChatMessage(text: "Hey cow brains, hows it going?Hey cow brains, hows it going?Hey cow brains, hows it going?Hey cow brains, hows it going?", isIncoming: false)
 
+    let chatMessages = [
+        [ ChatMessage(text: "HEYEYEYEYEY", isIncoming: true, date: Date()),
+          ChatMessage(text: "Hey cow brains, hows it going?", isIncoming: false, date: Date())
+        ],
+        [ ChatMessage(text: "Hey cow brains, this is a very very long message, lets see how its going to split onto different lines", isIncoming: true, date: Date()),
+          ChatMessage(text: "Hey cow brains, hows it going?Hey cow brains, hows it going?Hey cow brains, hows it going?Hey cow brains, hows it going?", isIncoming: false, date: Date())
+         ]
     ]
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,14 +31,30 @@ class ChatViewController: UITableViewController {
         tableView.backgroundColor = .white
     }
     
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return chatMessages.count
+        
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if let firstMessage = chatMessages[section].first {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "YYYY/MM/dd h:mm:ss a"
+
+            return dateFormatter.string(from: firstMessage.date)
+        }
+        
+        return "Couldn't grab date"
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-      return chatMessages.count
+      return chatMessages[section].count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId , for: indexPath) as! ChatMessageCell
-        cell.chatMessage = chatMessages[indexPath.row]
+        cell.chatMessage = chatMessages[indexPath.section][indexPath.row]
         return cell
     }
 
