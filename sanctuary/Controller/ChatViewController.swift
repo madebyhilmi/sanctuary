@@ -36,16 +36,44 @@ class ChatViewController: UITableViewController {
         
     }
     
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if let firstMessage = chatMessages[section].first {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "YYYY/MM/dd h:mm:ss a"
 
-            return dateFormatter.string(from: firstMessage.date)
+            let datestring = dateFormatter.string(from: firstMessage.date)
+            
+            let label = DateHeaderLabel()
+            label.text = datestring
+            
+            let containerView = UIView()
+            
+            containerView.addSubview(label)
+            label.centerXAnchor.constraint(equalTo: containerView.centerXAnchor).isActive = true
+            label.centerYAnchor.constraint(equalTo: containerView.centerYAnchor).isActive = true
+            
+            return containerView
         }
         
-        return "Couldn't grab date"
+        return nil
+        
+
     }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50
+    }
+    
+//    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        if let firstMessage = chatMessages[section].first {
+//            let dateFormatter = DateFormatter()
+//            dateFormatter.dateFormat = "YYYY/MM/dd h:mm:ss a"
+//
+//            return dateFormatter.string(from: firstMessage.date)
+//        }
+//
+//        return "Couldn't grab date"
+//    }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
