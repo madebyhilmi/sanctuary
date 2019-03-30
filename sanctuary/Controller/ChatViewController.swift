@@ -17,7 +17,11 @@ class ChatViewController: UITableViewController {
           ChatMessage(text: "Hey cow brains, hows it going?", isIncoming: false, date: Date())
         ],
         [ ChatMessage(text: "Hey cow brains, this is a very very long message, lets see how its going to split onto different lines", isIncoming: true, date: Date()),
-          ChatMessage(text: "Hey cow brains, hows it going?Hey cow brains, hows it going?Hey cow brains, hows it going?Hey cow brains, hows it going?", isIncoming: false, date: Date())
+          ChatMessage(text: "Hey cow brains, hows it going?Hey cow brains, hows it going?Hey cow brains, hows it going?Hey cow brains, hows it going?", isIncoming: false, date: Date()),
+          ChatMessage(text: "THis is a very very long message that will do something eventually but we just need more message like these idk why how much longer should it be????/", isIncoming: false, date: Date()),
+          ChatMessage(text: "THis is a very very long message that will do something eventually but we just need more message like these idk why how much longer should it be????/", isIncoming: false, date: Date()),
+          ChatMessage(text: "THis is a very very long message that will do something eventually but we just need more message like these idk why how much longer should it be????/", isIncoming: true, date: Date())
+            
          ]
     ]
     override func viewDidLoad() {
@@ -29,6 +33,21 @@ class ChatViewController: UITableViewController {
         tableView.register(ChatMessageCell.self, forCellReuseIdentifier: cellId)
         tableView.separatorStyle = .none
         tableView.backgroundColor = .white
+        
+        setUpInputComponents()
+    }
+    
+    func setUpInputComponents() {
+        let containerView = UIView()
+        containerView.backgroundColor = .darkGray
+        containerView.translatesAutoresizingMaskIntoConstraints = false
+        
+        navigationController?.view.addSubview(containerView)
+        
+        containerView.leftAnchor.constraint(equalTo: (navigationController?.view.leftAnchor)!).isActive = true
+        containerView.bottomAnchor.constraint(equalTo: (navigationController?.view.bottomAnchor)!).isActive = true
+        containerView.widthAnchor.constraint(equalTo: (navigationController?.view.widthAnchor)!).isActive = true
+        containerView.heightAnchor.constraint(equalToConstant: 70).isActive = true
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -39,7 +58,8 @@ class ChatViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if let firstMessage = chatMessages[section].first {
             let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "YYYY/MM/dd h:mm:ss a"
+          //  dateFormatter.dateFormat = "YYYY/MM/dd h:mm:ss a"
+            dateFormatter.dateFormat = "YYYY/MM/dd"
 
             let datestring = dateFormatter.string(from: firstMessage.date)
             

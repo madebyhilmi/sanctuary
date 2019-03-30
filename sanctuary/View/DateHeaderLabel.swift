@@ -13,7 +13,7 @@ class DateHeaderLabel: UILabel {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        backgroundColor = .black
+        backgroundColor = UIColor(red: (0xff)/255, green: 0x49/255, blue: 0x7e/255, alpha: 1)
         textColor = .white
         textAlignment = .center
         translatesAutoresizingMaskIntoConstraints = false //enable auto-layout
@@ -24,7 +24,7 @@ class DateHeaderLabel: UILabel {
     }
     
     override var intrinsicContentSize: CGSize {
-        font = UIFont.boldSystemFont(ofSize: 14)
+        font = UIFont.boldSystemFont(ofSize: 12)
         let originalContentSize = super.intrinsicContentSize
         let height = originalContentSize.height + 12
         layer.cornerRadius = height/2
