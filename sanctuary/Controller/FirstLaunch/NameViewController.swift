@@ -22,7 +22,7 @@ class NameViewController: FirstLaunchViewController {
         nextButton.isEnabled = false
         nextButton.alpha = 0.5
         nameTextField.becomeFirstResponder()
-        // Do any additional setup after loading the view.
+        nameTextField.addTarget(self, action: #selector(onChange(textField:)), for: .editingChanged)
     }
     
 
@@ -39,7 +39,7 @@ class NameViewController: FirstLaunchViewController {
         }
     }
 
-    @IBAction func onChange(_ sender: Any) {
+    @objc func onChange(textField: UITextField) {
         if (nameTextField.text?.count)! < 1 {
             nameTextField.placeholder = "Name"
             nameTextField.title = "Invalid Name"

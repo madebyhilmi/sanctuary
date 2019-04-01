@@ -8,7 +8,7 @@
 
 import UIKit
 
-class OrientationViewController: UIViewController {
+class OrientationViewController: FirstLaunchViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,14 +17,28 @@ class OrientationViewController: UIViewController {
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "toRelationshipType" {
+            if let destination = segue.destination as? SubViewController {
+                destination.profile = self.profile
+            }
+        }
     }
-    */
+    @IBAction func lookingForMale(_ sender: Any) {
+        super.profile?.orientation = "male"
+
+    }
+    @IBAction func lookingForFemale(_ sender: Any) {
+        super.profile?.orientation = "female"
+    }
+    @IBAction func lookingForNonbinary(_ sender: Any) {
+        super.profile?.orientation = "nonbinary"
+    }
+    
+    
 
 }

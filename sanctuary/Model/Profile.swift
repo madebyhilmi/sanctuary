@@ -18,6 +18,8 @@ class Profile {
     var dateOfBirth: Date
     var icebreaker: TwoTruthsOneLieIcebreaker
     var complete: Bool
+    var orientation: String
+    var relationship: String
     
     init?(){
         self.complete = false
@@ -28,6 +30,8 @@ class Profile {
         self.email = ""
         self.profilePic = UIImage(named: "jessica")!
         self.gender = "Male"
+        self.orientation = "Female"
+        self.relationship = "Casual"
         let dateFormatterGet = DateFormatter()
         dateFormatterGet.dateFormat = "yyyy/MM/dd HH:mm"
         self.dateOfBirth = dateFormatterGet.date(from: "2016/10/08 22:31")!

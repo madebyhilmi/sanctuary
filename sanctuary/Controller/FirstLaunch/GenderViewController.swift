@@ -25,7 +25,7 @@ class GenderViewController: FirstLaunchViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-        if segue.identifier == "toDOB" {
+        if segue.identifier == "toOrientation" {
             if let destination = segue.destination as? SubViewController {
                 destination.profile = self.profile
             }
