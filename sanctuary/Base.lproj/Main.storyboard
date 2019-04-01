@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hqQ-Mb-WYp">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,71 +11,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Splash Screen View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="SplashScreenViewController" customModule="sanctuary" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bird-white" translatesAutoresizingMaskIntoConstraints="NO" id="PVf-Qa-dZD">
-                                <rect key="frame" x="87.666666666666686" y="117" width="200" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="PVf-Qa-dZD" secondAttribute="height" multiplier="1:1" id="uIU-QI-t8Z"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SANCTUARY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0qk-eC-wUk">
-                                <rect key="frame" x="92.000000000000014" y="321" width="191.33333333333337" height="39.666666666666686"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
-                                <color key="textColor" red="0.9999879002571106" green="0.99999362230300903" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="101" translatesAutoresizingMaskIntoConstraints="NO" id="ZLa-h4-Jn4">
-                                <rect key="frame" x="51" y="476" width="273" height="30"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="neQ-B6-HaF">
-                                        <rect key="frame" x="0.0" y="0.0" width="83" height="30"/>
-                                        <state key="normal" title="start screen">
-                                            <color key="titleColor" red="0.99998790029999995" green="0.9999936223" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="csu-u9-2SS">
-                                        <rect key="frame" x="184" y="0.0" width="89" height="30"/>
-                                        <state key="normal" title="ready screen">
-                                            <color key="titleColor" red="0.99998790029999995" green="0.9999936223" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="hqQ-Mb-WYp" kind="show" id="PAa-rZ-eoH"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome! " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gNt-hu-Ic3">
-                                <rect key="frame" x="57" y="402" width="81" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" name="pink-light"/>
-                        <constraints>
-                            <constraint firstItem="ZLa-h4-Jn4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5hR-8N-VFt"/>
-                            <constraint firstItem="PVf-Qa-dZD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87.5" id="7FP-GM-rQ4"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PVf-Qa-dZD" secondAttribute="trailing" constant="87.5" id="VNL-1w-xEc"/>
-                            <constraint firstItem="ZLa-h4-Jn4" firstAttribute="top" secondItem="0qk-eC-wUk" secondAttribute="bottom" constant="115.33" id="Wba-Bo-8K0"/>
-                            <constraint firstItem="0qk-eC-wUk" firstAttribute="top" secondItem="PVf-Qa-dZD" secondAttribute="bottom" constant="4" id="aC3-B1-bya"/>
-                            <constraint firstItem="0qk-eC-wUk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dEb-7C-sr3"/>
-                            <constraint firstItem="PVf-Qa-dZD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="73" id="yru-Vw-dsV"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-306.39999999999998" y="35.467980295566505"/>
-        </scene>
         <!--Ready Screen View Controller-->
         <scene sceneID="0lA-ld-l67">
             <objects>
@@ -233,9 +168,6 @@
         <image name="bird-white" width="382" height="334"/>
         <namedColor name="pink">
             <color red="1" green="0.066666666666666666" blue="0.33725490196078434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="pink-light">
-            <color red="1" green="0.28600001335144043" blue="0.49399998784065247" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
