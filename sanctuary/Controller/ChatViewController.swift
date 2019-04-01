@@ -19,6 +19,10 @@ class ChatViewController: UITableViewController {
         textField.borderStyle = .none
         return textField
     }()
+    var inputViewBottomAnchor : NSLayoutConstraint?
+    var insets = UIEdgeInsets(top: 0, left: 0, bottom: 30, right: 0)
+
+
 
     var chatMessages = [
         [ ChatMessage(text: "HEYEYEYEYEY", isIncoming: true, date: Date()),
@@ -45,7 +49,45 @@ class ChatViewController: UITableViewController {
         let insets = UIEdgeInsets(top: 0, left: 0, bottom: 30, right: 0)
         tableView.contentInset = insets
         
+        tableView.keyboardDismissMode = .interactive
+        
         setUpInputComponents()
+
+        setUpKeyboardObservers()
+    }
+    
+    func setUpKeyboardObservers() {
+        NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        
+         NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    @objc func handleKeyboardWillHide(notification: NSNotification) {
+        inputViewBottomAnchor?.constant = 0
+        let keyboardDuration = (notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as AnyObject).doubleValue
+        
+        insets = UIEdgeInsets(top: 0, left: 0, bottom: 30, right: 0)
+        tableView.contentInset = insets
+        
+        UIView.animate(withDuration: keyboardDuration!, animations: { self.view.layoutIfNeeded() })
+
+    }
+    
+    @objc func handleKeyboardWillShow(notification: NSNotification) {
+        let keyboardFrame = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as AnyObject).cgRectValue
+        let keyboardDuration = (notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as AnyObject).doubleValue
+
+        insets = UIEdgeInsets(top: 0, left: 0, bottom: 65, right: 0)
+        tableView.contentInset = insets
+        
+        inputViewBottomAnchor?.constant = -keyboardFrame!.height
+        UIView.animate(withDuration: keyboardDuration!, animations: { self.view.layoutIfNeeded() })
     }
     
     func setUpInputComponents() {
@@ -56,7 +98,8 @@ class ChatViewController: UITableViewController {
         navigationController?.view.addSubview(inputView)
         
         inputView.leftAnchor.constraint(equalTo: (navigationController?.view.leftAnchor)!).isActive = true
-        inputView.bottomAnchor.constraint(equalTo: (navigationController?.view.bottomAnchor)!).isActive = true
+        inputViewBottomAnchor = inputView.bottomAnchor.constraint(equalTo: (navigationController?.view.bottomAnchor)!)
+        inputViewBottomAnchor?.isActive = true
         inputView.widthAnchor.constraint(equalTo: (navigationController?.view.widthAnchor)!).isActive = true
         inputView.heightAnchor.constraint(equalToConstant: 60).isActive = true
         
