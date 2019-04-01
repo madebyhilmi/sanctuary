@@ -20,7 +20,8 @@ class ChatMessageCell: UITableViewCell {
     
     var chatMessage: ChatMessage! {
         didSet {
-            bubbleBackgroundView.backgroundColor = chatMessage.isIncoming ? UIColor(white: 0.95, alpha: 1) : .darkGray
+            
+            bubbleBackgroundView.backgroundColor = chatMessage.isIncoming ? UIColor(white: 0.95, alpha: 1) : UIColor(red: (0xFF)/255.0, green: (0x11)/255.0, blue: (0x56)/255.0, alpha: 1)
             messageLabel.textColor = chatMessage.isIncoming ? .black : .white
             
             messageLabel.text = chatMessage.text
@@ -41,6 +42,8 @@ class ChatMessageCell: UITableViewCell {
         
         backgroundColor = .clear
         
+        selectionStyle = .none  
+        
         bubbleBackgroundView.backgroundColor = .green
         bubbleBackgroundView.layer.cornerRadius = 15
         bubbleBackgroundView.translatesAutoresizingMaskIntoConstraints = false
@@ -53,15 +56,17 @@ class ChatMessageCell: UITableViewCell {
         messageLabel.translatesAutoresizingMaskIntoConstraints = false
         
         //contsraints for label
-        let constraints = [ messageLabel.topAnchor.constraint(equalTo: topAnchor, constant: 16),
-                            messageLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16),
-                            messageLabel.widthAnchor.constraint(lessThanOrEqualToConstant: 250), //size it to only be 250 px wide
-        
-                            //needs to be after you add subview of lavel
-                            bubbleBackgroundView.topAnchor.constraint(equalTo: messageLabel.topAnchor, constant: -8),
-                            bubbleBackgroundView.leadingAnchor.constraint(equalTo: messageLabel.leadingAnchor, constant: -8),
-                            bubbleBackgroundView.bottomAnchor.constraint(equalTo: messageLabel.bottomAnchor, constant: 8),
-                            bubbleBackgroundView.trailingAnchor.constraint(equalTo: messageLabel.trailingAnchor, constant: 8)]
+        let constraints = [
+            messageLabel.topAnchor.constraint(equalTo: topAnchor, constant: 16),
+            messageLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16),
+            messageLabel.widthAnchor.constraint(lessThanOrEqualToConstant: 250), //size it to only be 250 px wide
+
+            //needs to be after you add subview of lavel
+            bubbleBackgroundView.topAnchor.constraint(equalTo: messageLabel.topAnchor, constant: -8),
+            bubbleBackgroundView.leadingAnchor.constraint(equalTo: messageLabel.leadingAnchor, constant: -8),
+            bubbleBackgroundView.bottomAnchor.constraint(equalTo: messageLabel.bottomAnchor, constant: 8),
+            bubbleBackgroundView.trailingAnchor.constraint(equalTo: messageLabel.trailingAnchor, constant: 8)
+        ]
         NSLayoutConstraint.activate(constraints)
 
         

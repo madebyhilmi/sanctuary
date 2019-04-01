@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17E9BDD6224FDCE100AD4BCE /* DateHeaderLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E9BDD5224FDCE100AD4BCE /* DateHeaderLabel.swift */; };
 		17FD927722432C3C0059B233 /* ChatMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FD927622432C3C0059B233 /* ChatMessageCell.swift */; };
 		17FD9279224331E50059B233 /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FD9278224331E50059B233 /* ChatMessage.swift */; };
 		9EE3D4D4E1864DE7671AD1EF /* Pods_sanctuaryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65FE783D71E5A5C0CD3AAAC2 /* Pods_sanctuaryTests.framework */; };
@@ -58,6 +59,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		17E9BDD5224FDCE100AD4BCE /* DateHeaderLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHeaderLabel.swift; sourceTree = "<group>"; };
 		17FD927622432C3C0059B233 /* ChatMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMessageCell.swift; sourceTree = "<group>"; };
 		17FD9278224331E50059B233 /* ChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
 		2D8683B1D783F0BB0E2DED6F /* Pods-sanctuaryUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sanctuaryUITests.release.xcconfig"; path = "Target Support Files/Pods-sanctuaryUITests/Pods-sanctuaryUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				17FD927622432C3C0059B233 /* ChatMessageCell.swift */,
+				17E9BDD5224FDCE100AD4BCE /* DateHeaderLabel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -512,6 +515,7 @@
 				ACF4F08E22371A6C0042283F /* TwoTruthsOneLieIcebreaker.swift in Sources */,
 				ACF4F09522371E600042283F /* GenderViewController.swift in Sources */,
 				AC7240C2223097FE00E769FE /* ChatViewController.swift in Sources */,
+				17E9BDD6224FDCE100AD4BCE /* DateHeaderLabel.swift in Sources */,
 				AC96F03C222EEDD100EE3D30 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
