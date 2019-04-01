@@ -1,16 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="am8-fJ-567">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rw1-ju-jdA">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Get Started View Controller-->
+        <scene sceneID="Gqs-M1-e4U">
+            <objects>
+                <viewController id="rw1-ju-jdA" customClass="GetStartedViewController" customModule="sanctuary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tBV-cO-PJw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Are you ready to find your next match?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P69-Br-TjU">
+                                <rect key="frame" x="32" y="426" width="343" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DHu-Ia-Kmk">
+                                <rect key="frame" x="133" y="627" width="108" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="pink-light"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Get Started">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="M34-OM-VwB" kind="show" id="pjd-7y-x05"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xn8-uc-lr3">
+                                <rect key="frame" x="32" y="394" width="219" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Welcome to Sanctuary! 
+</string>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bird-white" translatesAutoresizingMaskIntoConstraints="NO" id="6f5-TQ-5Lb">
+                                <rect key="frame" x="87" y="99" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SANCTUARY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IHG-mC-ZWq">
+                                <rect key="frame" x="102" y="307" width="171" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TXd-x6-OFc">
+                                <rect key="frame" x="133" y="667" width="108" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="pink-light"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="launchMainStoryboard:" destination="rw1-ju-jdA" eventType="touchUpInside" id="H7e-57-Ovs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="pink-light"/>
+                        <viewLayoutGuide key="safeArea" id="qrX-9c-yKE"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="eCW-vg-AYS"/>
+                    <connections>
+                        <outlet property="loginButton" destination="TXd-x6-OFc" id="eax-f9-UNf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oiW-RM-9RQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-423" y="-222"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="1bc-qo-5s4">
             <objects>
@@ -30,8 +102,8 @@
                                 <color key="textColor" name="pink"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Are you ready to find your next match?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eoZ-41-RA7">
-                                <rect key="frame" x="16" y="426" width="343" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="If you've got Facebook, Snapchat, or Instagram we can make your life easier." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eoZ-41-RA7">
+                                <rect key="frame" x="16" y="426" width="343" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -49,11 +121,9 @@
                                     <segue destination="dpH-6L-G46" kind="show" identifier="" id="tpD-jH-oCn"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="10M-Ua-Wi7">
-                                <rect key="frame" x="16" y="394" width="219" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time to build you a profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="10M-Ua-Wi7">
+                                <rect key="frame" x="16" y="394" width="241" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">Welcome to Sanctuary! 
-</string>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -62,10 +132,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="9ih-19-mKm"/>
                     </view>
+                    <navigationItem key="navigationItem" id="CKZ-F8-3oZ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dRF-RV-yX6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-562.39999999999998" y="-222.41379310344828"/>
+            <point key="canvasLocation" x="380" y="-222"/>
         </scene>
         <!--Phone Number View Controller-->
         <scene sceneID="BKY-ru-W05">
@@ -158,7 +229,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="90e-6T-1fr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="210" y="-222"/>
+            <point key="canvasLocation" x="1151.2" y="-222.41379310344828"/>
         </scene>
         <!--Name View Controller-->
         <scene sceneID="ZA2-rS-VSC">
@@ -247,7 +318,7 @@ Lets start off by getting your name!</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yZG-FF-uul" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1031" y="-222"/>
+            <point key="canvasLocation" x="1972" y="-222.41379310344828"/>
         </scene>
         <!--Gender View Controller-->
         <scene sceneID="tpU-YN-I0c">
@@ -334,7 +405,7 @@ Lets start off by getting your name!</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Am-C1-XJC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1889" y="-222"/>
+            <point key="canvasLocation" x="2831.1999999999998" y="-222.41379310344828"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="3Nx-fc-1Jm">
@@ -405,7 +476,7 @@ Lets start off by getting your name!</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d6M-dR-OLg" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="YfR-ub-E0O" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2840.8000000000002" y="-222.41379310344828"/>
+            <point key="canvasLocation" x="3783.1999999999998" y="-222.41379310344828"/>
         </scene>
         <!--Profile Picture Picker View Controller-->
         <scene sceneID="lEl-x7-rar">
@@ -458,7 +529,7 @@ Lets start off by getting your name!</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nFL-dm-5sY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3761" y="-222"/>
+            <point key="canvasLocation" x="4703.1999999999998" y="-222.41379310344828"/>
         </scene>
         <!--Profile Picture Picked View Controller-->
         <scene sceneID="hnu-qq-h5L">
@@ -508,7 +579,7 @@ Lets start off by getting your name!</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bp6-lF-aaW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4628" y="-222"/>
+            <point key="canvasLocation" x="5570.3999999999996" y="-222.41379310344828"/>
         </scene>
         <!--Icebreaker View Controller-->
         <scene sceneID="yiF-bS-cBw">
@@ -647,7 +718,7 @@ Lets start off by getting your name!</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Ub-r5-Ocp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5529" y="-222"/>
+            <point key="canvasLocation" x="6471.1999999999998" y="-222.41379310344828"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SWp-HS-qwJ">
@@ -667,7 +738,7 @@ Lets start off by getting your name!</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vaL-ha-PZU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-562" y="508"/>
+            <point key="canvasLocation" x="380" y="507.63546798029557"/>
         </scene>
         <!--Sub View Controller-->
         <scene sceneID="WRO-io-9ue">
@@ -684,7 +755,7 @@ Lets start off by getting your name!</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k2h-L2-Zem" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="209" y="508"/>
+            <point key="canvasLocation" x="1151.2" y="507.63546798029557"/>
         </scene>
         <!--Sub View Controller-->
         <scene sceneID="Ge2-hV-y1g">
@@ -701,7 +772,7 @@ Lets start off by getting your name!</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jEG-rr-eGH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1030" y="508"/>
+            <point key="canvasLocation" x="1972" y="507.63546798029557"/>
         </scene>
         <!--Sub View Controller-->
         <scene sceneID="t1K-eS-Ifh">
@@ -718,7 +789,7 @@ Lets start off by getting your name!</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P0v-ax-3dN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1889" y="508"/>
+            <point key="canvasLocation" x="2831.1999999999998" y="507.63546798029557"/>
         </scene>
         <!--Sub View Controller-->
         <scene sceneID="xBA-Dq-pig">
@@ -735,7 +806,7 @@ Lets start off by getting your name!</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U8L-sx-hgw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2841" y="508"/>
+            <point key="canvasLocation" x="3783.1999999999998" y="507.63546798029557"/>
         </scene>
         <!--Sub View Controller-->
         <scene sceneID="jBu-b3-67h">
@@ -752,7 +823,7 @@ Lets start off by getting your name!</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HTt-XM-YBZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3762" y="508"/>
+            <point key="canvasLocation" x="4703.1999999999998" y="507.63546798029557"/>
         </scene>
         <!--Sub View Controller-->
         <scene sceneID="Wjq-sq-Rz0">
@@ -769,7 +840,24 @@ Lets start off by getting your name!</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mrq-5r-cCE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4628" y="508"/>
+            <point key="canvasLocation" x="5570.3999999999996" y="507.63546798029557"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ErH-tT-qC7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="M34-OM-VwB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GBu-jh-zWK">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="am8-fJ-567" kind="relationship" relationship="rootViewController" id="1La-Sx-Rvh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B3d-26-EuN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-423" y="508"/>
         </scene>
     </scenes>
     <resources>
@@ -787,6 +875,6 @@ Lets start off by getting your name!</string>
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="8oe-dC-eVw"/>
+        <segue reference="zzG-Iq-PzL"/>
     </inferredMetricsTieBreakers>
 </document>

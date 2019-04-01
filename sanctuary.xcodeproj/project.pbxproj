@@ -11,6 +11,7 @@
 		17FD927722432C3C0059B233 /* ChatMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FD927622432C3C0059B233 /* ChatMessageCell.swift */; };
 		17FD9279224331E50059B233 /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FD9278224331E50059B233 /* ChatMessage.swift */; };
 		9EE3D4D4E1864DE7671AD1EF /* Pods_sanctuaryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65FE783D71E5A5C0CD3AAAC2 /* Pods_sanctuaryTests.framework */; };
+		AC35377C22529A1C00C82A1F /* GetStartedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC35377B22529A1C00C82A1F /* GetStartedViewController.swift */; };
 		AC7240BE223096CE00E769FE /* ReadyScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7240BD223096CE00E769FE /* ReadyScreenViewController.swift */; };
 		AC7240C02230978A00E769FE /* WelcomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7240BF2230978A00E769FE /* WelcomeScreenViewController.swift */; };
 		AC7240C2223097FE00E769FE /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7240C1223097FE00E769FE /* ChatViewController.swift */; };
@@ -65,6 +66,7 @@
 		2D8683B1D783F0BB0E2DED6F /* Pods-sanctuaryUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sanctuaryUITests.release.xcconfig"; path = "Target Support Files/Pods-sanctuaryUITests/Pods-sanctuaryUITests.release.xcconfig"; sourceTree = "<group>"; };
 		65FE783D71E5A5C0CD3AAAC2 /* Pods_sanctuaryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sanctuaryTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		69271C2D82D9A29DD29CC638 /* Pods_sanctuary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sanctuary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC35377B22529A1C00C82A1F /* GetStartedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedViewController.swift; sourceTree = "<group>"; };
 		AC7240BD223096CE00E769FE /* ReadyScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadyScreenViewController.swift; sourceTree = "<group>"; };
 		AC7240BF2230978A00E769FE /* WelcomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreenViewController.swift; sourceTree = "<group>"; };
 		AC7240C1223097FE00E769FE /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
@@ -259,6 +261,7 @@
 				ACF4F09C223742280042283F /* SubViewController.swift */,
 				ACF4F09E2237444E0042283F /* FirstLaunchViewController.swift */,
 				AC98D67D224012BE00DD7E86 /* ImagePickerManager.swift */,
+				AC35377B22529A1C00C82A1F /* GetStartedViewController.swift */,
 			);
 			path = FirstLaunch;
 			sourceTree = "<group>";
@@ -509,6 +512,7 @@
 				ACF4F09922371EA60042283F /* ProfilePicturePickerViewController.swift in Sources */,
 				17FD927722432C3C0059B233 /* ChatMessageCell.swift in Sources */,
 				ACF4F09322371E540042283F /* NameViewController.swift in Sources */,
+				AC35377C22529A1C00C82A1F /* GetStartedViewController.swift in Sources */,
 				AC7240BE223096CE00E769FE /* ReadyScreenViewController.swift in Sources */,
 				AC98D67E224012BE00DD7E86 /* ImagePickerManager.swift in Sources */,
 				ACF4F09D223742280042283F /* SubViewController.swift in Sources */,
@@ -695,6 +699,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JZ3M3A2VKE;
 				INFOPLIST_FILE = sanctuary/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -714,6 +719,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JZ3M3A2VKE;
 				INFOPLIST_FILE = sanctuary/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
