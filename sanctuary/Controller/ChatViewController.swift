@@ -41,6 +41,9 @@ class ChatViewController: UITableViewController {
         tableView.register(ChatMessageCell.self, forCellReuseIdentifier: cellId)
         tableView.separatorStyle = .none
         tableView.backgroundColor = .white
+
+        let insets = UIEdgeInsets(top: 0, left: 0, bottom: 30, right: 0)
+        tableView.contentInset = insets
         
         setUpInputComponents()
     }
@@ -55,7 +58,7 @@ class ChatViewController: UITableViewController {
         inputView.leftAnchor.constraint(equalTo: (navigationController?.view.leftAnchor)!).isActive = true
         inputView.bottomAnchor.constraint(equalTo: (navigationController?.view.bottomAnchor)!).isActive = true
         inputView.widthAnchor.constraint(equalTo: (navigationController?.view.widthAnchor)!).isActive = true
-        inputView.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        inputView.heightAnchor.constraint(equalToConstant: 60).isActive = true
         
         inputView.addSubview(textField)
         
@@ -102,7 +105,7 @@ class ChatViewController: UITableViewController {
         tableView.insertRows(at: [IndexPath.init(row: row, section: section)], with: .automatic)
         tableView.endUpdates()
         
-        tableView.scrollToRow(at: IndexPath.init(row: row, section: section), at: .bottom, animated: true)
+        tableView.scrollToRow(at: IndexPath.init(row: row, section: section), at: .bottom, animated: false)
 
     }
     
