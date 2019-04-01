@@ -25,15 +25,13 @@ class ChatViewController: UITableViewController {
 
 
     var chatMessages = [
-        [ ChatMessage(text: "HEYEYEYEYEY", isIncoming: true, date: Date()),
-          ChatMessage(text: "Hey cow brains, hows it going?", isIncoming: false, date: Date())
+        [ ChatMessage(text: "Hey", isIncoming: true, date: Date()),
+          ChatMessage(text: "Hey cutie, hows it going?", isIncoming: false, date: Date()),
+          ChatMessage(text: "I'm good, just chilling. Hbu?", isIncoming: true, date: Date()),
+          ChatMessage(text: "Good good, also chillin...", isIncoming: false, date: Date())
         ],
-        [ ChatMessage(text: "Hey cow brains, this is a very very long message, lets see how its going to split onto different lines", isIncoming: true, date: Date()),
-          ChatMessage(text: "Hey cow brains, hows it going?Hey cow brains, hows it going?Hey cow brains, hows it going?Hey cow brains, hows it going?", isIncoming: false, date: Date()),
-          ChatMessage(text: "THis is a very very long message that will do something eventually but we just need more message like these idk why how much longer should it be????/", isIncoming: false, date: Date()),
-          ChatMessage(text: "THis is a very very long message that will do something eventually but we just need more message like these idk why how much longer should it be????/", isIncoming: false, date: Date()),
-          ChatMessage(text: "THis is a very very long message that will do something eventually but we just need more message like these idk why how much longer should it be????/", isIncoming: true, date: Date())
-            
+        [
+          ChatMessage(text: "Here is the story of my life... I was born in the wilderness and went on to exist for quite a long time without knowledge of other people. My parents were mauled by bears at a young age. I was raised by the animals of the forest - thus my weird quirks. Eventually I wandered into a city and here we are now...", isIncoming: true, date: Date())
          ]
     ]
     override func viewDidLoad() {
@@ -88,6 +86,7 @@ class ChatViewController: UITableViewController {
         
         inputViewBottomAnchor?.constant = -keyboardFrame!.height
         UIView.animate(withDuration: keyboardDuration!, animations: { self.view.layoutIfNeeded() })
+        
     }
     
     func setUpInputComponents() {
@@ -133,7 +132,7 @@ class ChatViewController: UITableViewController {
     }
     
     @objc func sendMessage() {
-        print(textField.text!)
+       // print(textField.text!)
 
         var section = chatMessages.count - 1
         var row = chatMessages[section].count - 1
@@ -144,6 +143,8 @@ class ChatViewController: UITableViewController {
         section = chatMessages.count - 1
         row = chatMessages[section].count - 1
        
+        textField.text! = ""
+        
         tableView.beginUpdates()
         tableView.insertRows(at: [IndexPath.init(row: row, section: section)], with: .automatic)
         tableView.endUpdates()
