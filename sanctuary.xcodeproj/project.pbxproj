@@ -12,6 +12,7 @@
 		17FD927722432C3C0059B233 /* ChatMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FD927622432C3C0059B233 /* ChatMessageCell.swift */; };
 		17FD9279224331E50059B233 /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FD9278224331E50059B233 /* ChatMessage.swift */; };
 		5CC25DE8645DF058490D2821 /* Pods_sanctuaryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFEBC5AF45B571E423FA566D /* Pods_sanctuaryTests.framework */; };
+		AC12F2D1225B2C7E0003A505 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC12F2D0225B2C7E0003A505 /* MainViewController.swift */; };
 		AC35377C22529A1C00C82A1F /* GetStartedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC35377B22529A1C00C82A1F /* GetStartedViewController.swift */; };
 		AC7240BE223096CE00E769FE /* ReadyScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7240BD223096CE00E769FE /* ReadyScreenViewController.swift */; };
 		AC7240C02230978A00E769FE /* WelcomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7240BF2230978A00E769FE /* WelcomeScreenViewController.swift */; };
@@ -71,6 +72,7 @@
 		4BF09625047E9A9A5BEE1CE0 /* Pods_sanctuary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sanctuary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96B1E04B4B1AFCFD419ED2B7 /* Pods-sanctuaryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sanctuaryTests.release.xcconfig"; path = "Target Support Files/Pods-sanctuaryTests/Pods-sanctuaryTests.release.xcconfig"; sourceTree = "<group>"; };
 		9F893555AC1E987F6D20232E /* Pods-sanctuary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sanctuary.release.xcconfig"; path = "Target Support Files/Pods-sanctuary/Pods-sanctuary.release.xcconfig"; sourceTree = "<group>"; };
+		AC12F2D0225B2C7E0003A505 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		AC35377B22529A1C00C82A1F /* GetStartedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedViewController.swift; sourceTree = "<group>"; };
 		AC7240BD223096CE00E769FE /* ReadyScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadyScreenViewController.swift; sourceTree = "<group>"; };
 		AC7240BF2230978A00E769FE /* WelcomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreenViewController.swift; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 				AC7240C1223097FE00E769FE /* ChatViewController.swift */,
 				AC7240C32230980700E769FE /* ProfileViewController.swift */,
 				AC98D67F22401ECD00DD7E86 /* UIImage+circular.swift */,
+				AC12F2D0225B2C7E0003A505 /* MainViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -437,7 +440,6 @@
 				"${PODS_ROOT}/Target Support Files/Pods-sanctuary/Pods-sanctuary-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/JVFloatLabeledTextField/JVFloatLabeledTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/PhoneNumberKit/PhoneNumberKit.framework",
-				"${BUILT_PRODUCTS_DIR}/SPTPersistentCache/SPTPersistentCache.framework",
 				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -446,7 +448,6 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JVFloatLabeledTextField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PhoneNumberKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SPTPersistentCache.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -529,6 +530,7 @@
 				ACF4F08E22371A6C0042283F /* TwoTruthsOneLieIcebreaker.swift in Sources */,
 				ACF4F09522371E600042283F /* GenderViewController.swift in Sources */,
 				AC7240C2223097FE00E769FE /* ChatViewController.swift in Sources */,
+				AC12F2D1225B2C7E0003A505 /* MainViewController.swift in Sources */,
 				17E9BDD6224FDCE100AD4BCE /* DateHeaderLabel.swift in Sources */,
 				AC96F03C222EEDD100EE3D30 /* AppDelegate.swift in Sources */,
 			);

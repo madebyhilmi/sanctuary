@@ -8,7 +8,6 @@ PODS:
   - PhoneNumberKit/UIKit (2.6.0):
     - PhoneNumberKit/PhoneNumberKitCore
   - SkyFloatingLabelTextField (3.6.0)
-  - SPTPersistentCache (1.1.0)
   - SwiftLint (0.31.0)
 
 DEPENDENCIES:
@@ -16,7 +15,6 @@ DEPENDENCIES:
   - JVFloatLabeledTextField
   - PhoneNumberKit (~> 2.6)
   - SkyFloatingLabelTextField (~> 3.0)
-  - SPTPersistentCache
   - SwiftLint
 
 SPEC REPOS:
@@ -25,7 +23,6 @@ SPEC REPOS:
     - JVFloatLabeledTextField
     - PhoneNumberKit
     - SkyFloatingLabelTextField
-    - SPTPersistentCache
     - SwiftLint
 
 SPEC CHECKSUMS:
@@ -33,9 +30,8 @@ SPEC CHECKSUMS:
   JVFloatLabeledTextField: cfc44e3c4d493b2ed92ede8035e8e89c2912ba64
   PhoneNumberKit: 167ee1f0bbb6efce7c62559e620eae745595532f
   SkyFloatingLabelTextField: 38164979b79512f9ff9288ad8acfc4bbf5d843e3
-  SPTPersistentCache: df36ea46762d7cf026502bbb86a8b79d0080dff4
   SwiftLint: 7a0227733d786395817373b2d0ca799fd0093ff3
 
-PODFILE CHECKSUM: 011b27ee8fea6dd8dc8beee4a26937ee404dd7cc
+PODFILE CHECKSUM: 48aa8e2513ebeb187954ef3cf13677a3eccc097e
 
 COCOAPODS: 1.6.1
