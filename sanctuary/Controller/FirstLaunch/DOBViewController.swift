@@ -27,8 +27,8 @@ class DOBViewController: FirstLaunchViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-        if segue.identifier == "toProfilePicture" {
-            if let destination = segue.destination as? SubViewController {
+        if segue.identifier == "toPPPicker" {
+            if let destination = segue.destination as? FirstLaunchViewController {
                 destination.profile = self.profile
             }
         }

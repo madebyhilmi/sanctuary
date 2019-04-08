@@ -26,7 +26,7 @@ class GenderViewController: FirstLaunchViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
         if segue.identifier == "toOrientation" {
-            if let destination = segue.destination as? SubViewController {
+            if let destination = segue.destination as? FirstLaunchViewController {
                 destination.profile = self.profile
             }
         }

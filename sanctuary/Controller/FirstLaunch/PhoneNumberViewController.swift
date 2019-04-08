@@ -25,10 +25,11 @@ class PhoneNumberViewController: FirstLaunchViewController {
         phoneNumberKit = PhoneNumberKit()
         phoneNumberTextField.addTarget(self, action: #selector(phoneNumberTextFieldDidChange(textField:)), for: .editingChanged)
 
+        //Initialize Profile
+        super.profile = Profile()
+        
 
-        // Do any additional setup after loading the view.
     }
-    
 
     
     // MARK: - Navigation
@@ -38,7 +39,7 @@ class PhoneNumberViewController: FirstLaunchViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
         if segue.identifier == "toName" {
-            if let destination = segue.destination as? SubViewController {
+            if let destination = segue.destination as? FirstLaunchViewController {
                 destination.profile = self.profile
             }
         }

@@ -23,7 +23,12 @@ class NameViewController: FirstLaunchViewController {
         nextButton.alpha = 0.5
         nameTextField.becomeFirstResponder()
         nameTextField.addTarget(self, action: #selector(onChange(textField:)), for: .editingChanged)
+
+
+        
     }
+
+
     
 
     // MARK: - Navigation
@@ -33,7 +38,7 @@ class NameViewController: FirstLaunchViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
         if segue.identifier == "toGender" {
-            if let destination = segue.destination as? SubViewController {
+            if let destination = segue.destination as? FirstLaunchViewController {
                 destination.profile = self.profile
             }
         }

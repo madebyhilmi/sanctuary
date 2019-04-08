@@ -24,7 +24,7 @@ class ProfilePicturePickedViewController: FirstLaunchViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toIcebreaker" {
-            if let destination = segue.destination as? SubViewController {
+            if let destination = segue.destination as? FirstLaunchViewController {
                 destination.profile = self.profile
             }
         }

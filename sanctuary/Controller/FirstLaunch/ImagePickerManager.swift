@@ -15,11 +15,7 @@ class ImagePickerManager: NSObject, UIImagePickerControllerDelegate, UINavigatio
         pickImageCallback = callback;
         self.viewController = viewController;
         
-        let cameraAction = UIAlertAction(title: "Camera", style: .default){
-            UIAlertAction in
-            self.openCamera()
-        }
-        let gallaryAction = UIAlertAction(title: "Gallary", style: .default){
+        let galleryAction = UIAlertAction(title: "Gallery", style: .default){
             UIAlertAction in
             self.openGallery()
         }
@@ -29,22 +25,12 @@ class ImagePickerManager: NSObject, UIImagePickerControllerDelegate, UINavigatio
         
         // Add the actions
         picker.delegate = self
-        alert.addAction(cameraAction)
-        alert.addAction(gallaryAction)
+        alert.addAction(galleryAction)
         alert.addAction(cancelAction)
         alert.popoverPresentationController?.sourceView = self.viewController!.view
         viewController.present(alert, animated: true, completion: nil)
     }
-    func openCamera(){
-        alert.dismiss(animated: true, completion: nil)
-        if(UIImagePickerController .isSourceTypeAvailable(.camera)){
-            picker.sourceType = .camera
-            self.viewController!.present(picker, animated: true, completion: nil)
-        } else {
-            let alertWarning = UIAlertView(title:"Warning", message: "You don't have camera", delegate:nil, cancelButtonTitle:"OK", otherButtonTitles:"")
-            alertWarning.show()
-        }
-    }
+    
     func openGallery(){
         alert.dismiss(animated: true, completion: nil)
         picker.sourceType = .photoLibrary

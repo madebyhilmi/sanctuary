@@ -28,7 +28,7 @@ class IcebreakerViewController: FirstLaunchViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toStart" {
-            if let destination = segue.destination as? SubViewController {
+            if let destination = segue.destination as? FirstLaunchViewController {
                 destination.profile = self.profile
             }
         }
@@ -39,7 +39,8 @@ class IcebreakerViewController: FirstLaunchViewController {
         super.profile?.icebreaker.lie = lieTextField.text!
 
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "ReadyScreen") as UIViewController
+        let vc = storyboard.instantiateViewController(withIdentifier: "ReadyScreen") as! ReadyScreenViewController
+        vc.profile = self.profile
         present(vc, animated: true, completion: nil)
     }
     

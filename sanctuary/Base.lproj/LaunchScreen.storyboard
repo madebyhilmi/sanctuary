@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="bird-white" translatesAutoresizingMaskIntoConstraints="NO" id="tA5-Ef-opM">
-                                <rect key="frame" x="87" y="94" width="200" height="200"/>
+                                <rect key="frame" x="8" y="94" width="359" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="tA5-Ef-opM" secondAttribute="height" multiplier="1:1" id="xb2-we-zmv"/>
                                 </constraints>
@@ -33,7 +33,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="SANCTUARY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wta-yF-MJw">
-                                <rect key="frame" x="87" y="302" width="210" height="40"/>
+                                <rect key="frame" x="87" y="302" width="201" height="40"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="33"/>
                                 <color key="textColor" red="0.99998790029999995" green="0.9999936223" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -41,6 +41,10 @@
                         </subviews>
                         <color key="backgroundColor" name="pink-light"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="tA5-Ef-opM" secondAttribute="trailing" constant="8" id="HHD-zf-D53"/>
+                            <constraint firstItem="tA5-Ef-opM" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="8" id="Q7i-w2-aNO"/>
+                            <constraint firstItem="wta-yF-MJw" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="WWJ-PH-TwV"/>
+                            <constraint firstItem="tA5-Ef-opM" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="gev-4I-Vj7"/>
                             <constraint firstItem="wta-yF-MJw" firstAttribute="top" secondItem="tA5-Ef-opM" secondAttribute="bottom" constant="4" id="xy2-5p-rVI"/>
                             <constraint firstItem="tA5-Ef-opM" firstAttribute="width" secondItem="tA5-Ef-opM" secondAttribute="height" multiplier="1:1" id="zzs-rn-fed"/>
                         </constraints>

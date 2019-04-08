@@ -10,6 +10,8 @@ import UIKit
 
 class ReadyScreenViewController: UIViewController {
 
+    var profile: Profile?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
