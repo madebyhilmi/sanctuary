@@ -19,54 +19,66 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bird-white" translatesAutoresizingMaskIntoConstraints="NO" id="lrE-RC-eMc">
-                                <rect key="frame" x="87.666666666666686" y="185" width="200" height="200"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="13U-gX-956">
+                                <rect key="frame" x="0.0" y="44" width="375" height="674"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wHB-OJ-xOf">
+                                        <rect key="frame" x="85.666666666666686" y="308.66666666666669" width="204" height="57"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                        <state key="normal" title="Tap to Match">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="Tbt-pF-mUB" kind="show" id="sVy-d6-VeH"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bird-white" translatesAutoresizingMaskIntoConstraints="NO" id="lrE-RC-eMc">
+                                        <rect key="frame" x="24" y="8" width="327" height="327"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="lrE-RC-eMc" secondAttribute="height" multiplier="1:1" id="pyX-wR-6rx"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="lrE-RC-eMc" secondAttribute="height" multiplier="1:1" id="Tm2-bb-a1Q"/>
+                                    <constraint firstItem="wHB-OJ-xOf" firstAttribute="centerX" secondItem="13U-gX-956" secondAttribute="centerX" id="16R-L6-XfX"/>
+                                    <constraint firstItem="lrE-RC-eMc" firstAttribute="top" secondItem="13U-gX-956" secondAttribute="top" constant="8" id="BO6-zy-fAb"/>
+                                    <constraint firstAttribute="trailing" secondItem="lrE-RC-eMc" secondAttribute="trailing" constant="24" id="I5e-wu-hnu"/>
+                                    <constraint firstItem="wHB-OJ-xOf" firstAttribute="centerY" secondItem="13U-gX-956" secondAttribute="centerY" id="Pet-zB-mIv"/>
+                                    <constraint firstItem="lrE-RC-eMc" firstAttribute="leading" secondItem="13U-gX-956" secondAttribute="leading" constant="24" id="QZS-oe-46h"/>
+                                    <constraint firstItem="lrE-RC-eMc" firstAttribute="centerX" secondItem="13U-gX-956" secondAttribute="centerX" id="g0F-46-sMU"/>
                                 </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Match" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yHP-Bq-moM">
-                                <rect key="frame" x="85.666666666666686" y="439" width="204" height="45"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
-                                <color key="textColor" red="0.99998790029999995" green="0.9999936223" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Abh-Up-xNj">
                                 <rect key="frame" x="141" y="726" width="93" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Edit Profile">
                                     <color key="titleColor" red="0.99998790029999995" green="0.9999936223" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="editProfileClicked:" destination="hqQ-Mb-WYp" eventType="touchUpInside" id="kdW-p1-aIP"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" name="pink"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="lrE-RC-eMc" firstAttribute="top" secondItem="8cd-1A-TL5" secondAttribute="top" constant="141" id="9W5-rY-apB"/>
+                            <constraint firstItem="Abh-Up-xNj" firstAttribute="top" secondItem="13U-gX-956" secondAttribute="bottom" constant="8" id="2D3-qv-lHG"/>
                             <constraint firstItem="8cd-1A-TL5" firstAttribute="bottom" secondItem="Abh-Up-xNj" secondAttribute="bottom" constant="16" id="LT3-fP-eBd"/>
                             <constraint firstItem="8cd-1A-TL5" firstAttribute="trailing" secondItem="Abh-Up-xNj" secondAttribute="trailing" constant="141" id="MZn-IX-ZtN"/>
-                            <constraint firstItem="yHP-Bq-moM" firstAttribute="top" secondItem="lrE-RC-eMc" secondAttribute="bottom" constant="54" id="Oi0-My-MaW"/>
-                            <constraint firstItem="8cd-1A-TL5" firstAttribute="trailing" secondItem="yHP-Bq-moM" secondAttribute="trailing" constant="85.5" id="Xyn-Tc-H59"/>
-                            <constraint firstItem="yHP-Bq-moM" firstAttribute="leading" secondItem="8cd-1A-TL5" secondAttribute="leading" constant="85.5" id="aMd-cR-Afr"/>
+                            <constraint firstItem="13U-gX-956" firstAttribute="trailing" secondItem="8cd-1A-TL5" secondAttribute="trailing" id="YNI-qp-CiZ"/>
+                            <constraint firstItem="13U-gX-956" firstAttribute="leading" secondItem="8cd-1A-TL5" secondAttribute="leading" id="baz-nR-Axu"/>
                             <constraint firstItem="Abh-Up-xNj" firstAttribute="leading" secondItem="8cd-1A-TL5" secondAttribute="leading" constant="141" id="ied-qX-MwR"/>
-                            <constraint firstItem="lrE-RC-eMc" firstAttribute="leading" secondItem="8cd-1A-TL5" secondAttribute="leading" constant="87.5" id="kLe-Bv-95B"/>
-                            <constraint firstItem="8cd-1A-TL5" firstAttribute="trailing" secondItem="lrE-RC-eMc" secondAttribute="trailing" constant="87.5" id="uuJ-Ob-C0U"/>
+                            <constraint firstItem="13U-gX-956" firstAttribute="top" secondItem="8cd-1A-TL5" secondAttribute="top" id="sMV-dN-aMy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8cd-1A-TL5"/>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="DfZ-Ob-lgX" appends="YES" id="gQD-Tp-LcL"/>
-                        </connections>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2mF-WQ-nJy" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="DfZ-Ob-lgX">
-                    <connections>
-                        <segue destination="Tbt-pF-mUB" kind="show" id="TWu-Nc-WYn"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="597.60000000000002" y="35.532233883058474"/>
+            <point key="canvasLocation" x="597.60000000000002" y="35.467980295566505"/>
         </scene>
         <!--Welcome Screen View Controller-->
         <scene sceneID="uSe-vK-dow">

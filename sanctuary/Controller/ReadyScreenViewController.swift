@@ -28,5 +28,10 @@ class ReadyScreenViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    @IBAction func editProfileClicked(_ sender: Any) {
+        print("I touched it boss")
+    }
+    
+    
+    
 }

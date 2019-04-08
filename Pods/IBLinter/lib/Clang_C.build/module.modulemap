@@ -1,4 +1,0 @@
-module Clang_C {
-    umbrella header "/Users/travis/build/IBDecodable/IBLinter/.build/checkouts/SourceKitten.git-6484296299232452758/Source/Clang_C/include/Clang_C.h"
-    export *
-}
