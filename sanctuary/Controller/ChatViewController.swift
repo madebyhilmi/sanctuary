@@ -15,7 +15,12 @@ class ChatViewController: UITableViewController {
     var inputViewBottomAnchor : NSLayoutConstraint?
     var insets = UIEdgeInsets(top: 0, left: 0, bottom: 30, right: 0)
 
-
+    lazy var profileBtnImageView: ProfileBtnView = {
+        let containerView = ProfileBtnView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 50))
+        containerView.chatLogController = self
+        
+        return containerView
+    }()
 
     var chatMessages = [
         [ ChatMessage(text: "Hey", isIncoming: true, date: Date()),
@@ -30,29 +35,13 @@ class ChatViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.title = "Chat"
         navigationController?.navigationBar.prefersLargeTitles = false
  
-        let profileBtn = UIButton(type: .system)
-        profileBtn.setTitle("Profile", for: .normal)
-        let profileImg = UIImage(named: "jessica")
-        profileBtn.setImage(profileImg, for: .normal)
-        profileBtn.frame = CGRect(x: 0, y: 0, width: 5, height: 5)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: profileBtnImageView)
         
-        //The image of the user you are chatting with
-        let profileImageView = UIImageView()
-        profileImageView.isUserInteractionEnabled = true
-        profileImageView.image = UIImage(named: "jessica")
-        profileImageView.translatesAutoresizingMaskIntoConstraints = false
-        profileImageView.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        profileImageView.widthAnchor.constraint(equalToConstant: 50).isActive = true
-
-       // let profileContainer = UIView()
-        
-        
-        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: profileImageView)
-        
-        
+//        let gesture = UITapGestureRecognizer(target: navigationItem.leftBarButtonItem, action:  #selector(checkAction))
+//        profileBtnImageView.addGestureRecognizer(gesture)
+//
         let unmatchBtn = UIButton(type: .system)
         unmatchBtn.setTitle("I'm bored", for: .normal)
         navigationItem.rightBarButtonItem = UIBarButtonItem(customView: unmatchBtn)
@@ -75,6 +64,10 @@ class ChatViewController: UITableViewController {
         
     }
     
+    @objc func checkAction() {
+        print("checkAction")
+    }
+    
     //Prevent chat from showing up below and above the chat screen area
     func setUpClearFixes() {
         let bottomClearFixView = UIView()
@@ -90,6 +83,7 @@ class ChatViewController: UITableViewController {
         navigationController?.view.backgroundColor = .white
         
     }
+   
     
     //Set up the input area
     lazy var inputContainerView: ChatInputView = {

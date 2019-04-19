@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0EB81CFD13A7C7C77712E854 /* Pods_sanctuaryUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF83AC34B29232050216C892 /* Pods_sanctuaryUITests.framework */; };
 		173D3FFF226A5441005D4F15 /* ChatInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173D3FFE226A5441005D4F15 /* ChatInputView.swift */; };
+		173D4001226A8611005D4F15 /* ProfileBtnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173D4000226A8611005D4F15 /* ProfileBtnView.swift */; };
 		17E9BDD6224FDCE100AD4BCE /* DateHeaderLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E9BDD5224FDCE100AD4BCE /* DateHeaderLabel.swift */; };
 		17FD927722432C3C0059B233 /* ChatMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FD927622432C3C0059B233 /* ChatMessageCell.swift */; };
 		17FD9279224331E50059B233 /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FD9278224331E50059B233 /* ChatMessage.swift */; };
@@ -65,6 +66,7 @@
 
 /* Begin PBXFileReference section */
 		173D3FFE226A5441005D4F15 /* ChatInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInputView.swift; sourceTree = "<group>"; };
+		173D4000226A8611005D4F15 /* ProfileBtnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileBtnView.swift; sourceTree = "<group>"; };
 		17E9BDD5224FDCE100AD4BCE /* DateHeaderLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHeaderLabel.swift; sourceTree = "<group>"; };
 		17FD927622432C3C0059B233 /* ChatMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMessageCell.swift; sourceTree = "<group>"; };
 		17FD9278224331E50059B233 /* ChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				17FD927622432C3C0059B233 /* ChatMessageCell.swift */,
 				17E9BDD5224FDCE100AD4BCE /* DateHeaderLabel.swift */,
 				173D3FFE226A5441005D4F15 /* ChatInputView.swift */,
+				173D4000226A8611005D4F15 /* ProfileBtnView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -516,6 +519,7 @@
 				AC96F03E222EEDD100EE3D30 /* SplashScreenViewController.swift in Sources */,
 				17FD9279224331E50059B233 /* ChatMessage.swift in Sources */,
 				ACF4F09B22371EBC0042283F /* IcebreakerViewController.swift in Sources */,
+				173D4001226A8611005D4F15 /* ProfileBtnView.swift in Sources */,
 				AC98D68022401ECD00DD7E86 /* UIImage+circular.swift in Sources */,
 				AC7240C02230978A00E769FE /* WelcomeScreenViewController.swift in Sources */,
 				ACF4F08A223718640042283F /* Profile.swift in Sources */,
