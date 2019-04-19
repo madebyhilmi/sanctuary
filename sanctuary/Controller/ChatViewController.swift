@@ -12,13 +12,6 @@ class ChatViewController: UITableViewController {
 
     fileprivate let cellId = "id"
     
-    let textField : UITextField = {
-        let textField = UITextField()
-        textField.placeholder = "Don't be shy..."
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.borderStyle = .none
-        return textField
-    }()
     var inputViewBottomAnchor : NSLayoutConstraint?
     var insets = UIEdgeInsets(top: 0, left: 0, bottom: 30, right: 0)
 
@@ -38,8 +31,36 @@ class ChatViewController: UITableViewController {
         super.viewDidLoad()
         
         navigationItem.title = "Chat"
-        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.prefersLargeTitles = false
+ 
+        let profileBtn = UIButton(type: .system)
+        profileBtn.setTitle("Profile", for: .normal)
+        let profileImg = UIImage(named: "jessica")
+        profileBtn.setImage(profileImg, for: .normal)
+        profileBtn.frame = CGRect(x: 0, y: 0, width: 5, height: 5)
+        
+        //The image of the user you are chatting with
+        let profileImageView = UIImageView()
+        profileImageView.isUserInteractionEnabled = true
+        profileImageView.image = UIImage(named: "jessica")
+        profileImageView.translatesAutoresizingMaskIntoConstraints = false
+        profileImageView.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        profileImageView.widthAnchor.constraint(equalToConstant: 50).isActive = true
 
+       // let profileContainer = UIView()
+        
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: profileImageView)
+        
+        
+        let unmatchBtn = UIButton(type: .system)
+        unmatchBtn.setTitle("I'm bored", for: .normal)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: unmatchBtn)
+
+        navigationController?.navigationBar.isTranslucent = true
+        navigationController?.navigationBar.backgroundColor = .white
+
+        
         tableView.register(ChatMessageCell.self, forCellReuseIdentifier: cellId)
         tableView.separatorStyle = .none
         tableView.backgroundColor = .white
@@ -47,17 +68,47 @@ class ChatViewController: UITableViewController {
         let insets = UIEdgeInsets(top: 0, left: 0, bottom: 30, right: 0)
         tableView.contentInset = insets
         
+        setUpClearFixes()
+        
+        
         tableView.keyboardDismissMode = .interactive
         
-        setUpInputComponents()
-
-        setUpKeyboardObservers()
     }
     
-    func setUpKeyboardObservers() {
-        NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+    //Prevent chat from showing up below and above the chat screen area
+    func setUpClearFixes() {
+        let bottomClearFixView = UIView()
+        bottomClearFixView.backgroundColor = .white
+        bottomClearFixView.translatesAutoresizingMaskIntoConstraints = false
         
-         NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        navigationController?.view.addSubview(bottomClearFixView)
+        
+        bottomClearFixView.bottomAnchor.constraint(equalTo: (navigationController?.view.bottomAnchor)!).isActive = true
+        bottomClearFixView.widthAnchor.constraint(equalTo: (navigationController?.view.widthAnchor)!).isActive = true
+        bottomClearFixView.heightAnchor.constraint(equalToConstant: 30).isActive = true
+    
+        navigationController?.view.backgroundColor = .white
+        
+    }
+    
+    //Set up the input area
+    lazy var inputContainerView: ChatInputView = {
+        let containerView = ChatInputView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 50))
+        containerView.chatLogController = self
+
+        return containerView
+    }()
+    
+    override var inputAccessoryView: UIView? {
+        get {
+           
+            return inputContainerView
+        }
+    }
+    
+    override var canBecomeFirstResponder: Bool {
+        get {return true}
+        
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -66,90 +117,28 @@ class ChatViewController: UITableViewController {
         NotificationCenter.default.removeObserver(self)
     }
     
-    @objc func handleKeyboardWillHide(notification: NSNotification) {
-        inputViewBottomAnchor?.constant = 0
-        let keyboardDuration = (notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as AnyObject).doubleValue
-        
-        insets = UIEdgeInsets(top: 0, left: 0, bottom: 30, right: 0)
-        tableView.contentInset = insets
-        
-        UIView.animate(withDuration: keyboardDuration!, animations: { self.view.layoutIfNeeded() })
-
-    }
-    
-    @objc func handleKeyboardWillShow(notification: NSNotification) {
-        let keyboardFrame = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as AnyObject).cgRectValue
-        let keyboardDuration = (notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as AnyObject).doubleValue
-
-        insets = UIEdgeInsets(top: 0, left: 0, bottom: 65, right: 0)
-        tableView.contentInset = insets
-        
-        inputViewBottomAnchor?.constant = -keyboardFrame!.height
-        UIView.animate(withDuration: keyboardDuration!, animations: { self.view.layoutIfNeeded() })
-        
-    }
-    
-    func setUpInputComponents() {
-        let inputView = UIView()
-        inputView.backgroundColor = .white
-        inputView.translatesAutoresizingMaskIntoConstraints = false
-        
-        navigationController?.view.addSubview(inputView)
-        
-        inputView.leftAnchor.constraint(equalTo: (navigationController?.view.leftAnchor)!).isActive = true
-        inputViewBottomAnchor = inputView.bottomAnchor.constraint(equalTo: (navigationController?.view.bottomAnchor)!)
-        inputViewBottomAnchor?.isActive = true
-        inputView.widthAnchor.constraint(equalTo: (navigationController?.view.widthAnchor)!).isActive = true
-        inputView.heightAnchor.constraint(equalToConstant: 60).isActive = true
-        
-        inputView.addSubview(textField)
-        
-        textField.leftAnchor.constraint(equalTo: inputView.leftAnchor, constant: 10).isActive = true
-        textField.topAnchor.constraint(equalTo: inputView.topAnchor, constant: 5).isActive = true
-        textField.widthAnchor.constraint(equalTo: inputView.widthAnchor, constant: -83).isActive = true
-        
-        let sendBtn = UIButton(type: .system)
-        sendBtn.setTitle("Send", for: .normal)
-        sendBtn.translatesAutoresizingMaskIntoConstraints = false
-        
-        inputView.addSubview(sendBtn)
-        
-        sendBtn.rightAnchor.constraint(equalTo: inputView.rightAnchor).isActive = true
-        sendBtn.topAnchor.constraint(equalTo: inputView.topAnchor).isActive = true
-        sendBtn.widthAnchor.constraint(equalToConstant: 80).isActive = true
-        
-        sendBtn.addTarget(self, action: #selector(sendMessage), for: .touchUpInside)
-        
-        let seperatorLineView = UIView()
-        seperatorLineView.backgroundColor = UIColor(white: 0.90, alpha: 1)
-        seperatorLineView.translatesAutoresizingMaskIntoConstraints = false
-        inputView.addSubview(seperatorLineView)
-        
-        seperatorLineView.leftAnchor.constraint(equalTo: inputView.leftAnchor).isActive = true
-        seperatorLineView.topAnchor.constraint(equalTo: inputView.topAnchor).isActive = true
-        seperatorLineView.heightAnchor.constraint(equalToConstant: 1).isActive = true
-        seperatorLineView.widthAnchor.constraint(equalTo: inputView.widthAnchor).isActive = true
-    }
     
     @objc func sendMessage() {
        // print(textField.text!)
-
-        var section = chatMessages.count - 1
-        var row = chatMessages[section].count - 1
+        if (inputContainerView.inputTextField.text! != "") {
+            var section = chatMessages.count - 1
+            var row = chatMessages[section].count - 1
+            
+            chatMessages[section].append(ChatMessage(text: inputContainerView.inputTextField.text!, isIncoming: false, date: Date()))
+            
+            //since we added an el get new values
+            section = chatMessages.count - 1
+            row = chatMessages[section].count - 1
+            
+            inputContainerView.inputTextField.text! = ""
+            
+            tableView.beginUpdates()
+            tableView.insertRows(at: [IndexPath.init(row: row, section: section)], with: .automatic)
+            tableView.endUpdates()
+            
+            tableView.scrollToRow(at: IndexPath.init(row: row, section: section), at: .bottom, animated: false)
+        }
         
-        chatMessages[section].append(ChatMessage(text: textField.text!, isIncoming: false, date: Date()))
-        
-        //since we added an el get new values
-        section = chatMessages.count - 1
-        row = chatMessages[section].count - 1
-       
-        textField.text! = ""
-        
-        tableView.beginUpdates()
-        tableView.insertRows(at: [IndexPath.init(row: row, section: section)], with: .automatic)
-        tableView.endUpdates()
-        
-        tableView.scrollToRow(at: IndexPath.init(row: row, section: section), at: .bottom, animated: false)
 
     }
     
