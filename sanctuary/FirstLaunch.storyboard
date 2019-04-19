@@ -1371,7 +1371,7 @@ Lets start off by getting your name!</string>
         </scene>
     </scenes>
     <resources>
-        <image name="bird-pink" width="383" height="336"/>
+        <image name="bird-pink" width="382" height="334"/>
         <image name="bird-white" width="382" height="334"/>
         <image name="jessica" width="363" height="363"/>
         <namedColor name="orange">
