@@ -156,7 +156,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OIB-0K-89k" userLabel="Content View">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="690"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="SANCTUARY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hs-Tv-fh0">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SANCTUARY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hs-Tv-fh0">
                                                 <rect key="frame" x="8" y="178" width="359" height="34"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                                 <color key="textColor" name="pink"/>
@@ -213,8 +213,9 @@
                                             <constraint firstAttribute="trailing" secondItem="eoZ-41-RA7" secondAttribute="trailing" constant="8" id="dnO-W2-LFo"/>
                                             <constraint firstItem="10M-Ua-Wi7" firstAttribute="top" secondItem="3hs-Tv-fh0" secondAttribute="bottom" constant="54" id="eRD-O1-dTL"/>
                                             <constraint firstAttribute="trailing" secondItem="10M-Ua-Wi7" secondAttribute="trailing" constant="8" id="eSR-4W-y6u"/>
+                                            <constraint firstAttribute="trailing" secondItem="3hs-Tv-fh0" secondAttribute="trailing" constant="8" id="emC-Yk-W90"/>
                                             <constraint firstAttribute="trailing" secondItem="z6J-j8-vcW" secondAttribute="trailing" constant="8" id="gSE-cS-ei3"/>
-                                            <constraint firstItem="eoZ-41-RA7" firstAttribute="top" secondItem="10M-Ua-Wi7" secondAttribute="bottom" constant="8" id="oRE-Gn-EMi"/>
+                                            <constraint firstItem="3hs-Tv-fh0" firstAttribute="leading" secondItem="OIB-0K-89k" secondAttribute="leading" constant="8" id="hWw-VD-dby"/>
                                             <constraint firstAttribute="bottom" secondItem="z6J-j8-vcW" secondAttribute="bottom" constant="16" id="qo9-tf-Y5V"/>
                                             <constraint firstItem="eoZ-41-RA7" firstAttribute="top" secondItem="10M-Ua-Wi7" secondAttribute="bottom" constant="16" id="rdE-Tn-fmb"/>
                                         </constraints>
@@ -824,7 +825,7 @@ Lets start off by getting your name!</string>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="30"/>
+                                        <integer key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -891,6 +892,10 @@ Lets start off by getting your name!</string>
                     <navigationItem key="navigationItem" id="kZH-um-UGG">
                         <barButtonItem key="backBarButtonItem" title=" " id="q50-Ky-VxK"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="nextButton" destination="Q1O-PJ-izT" id="J9g-3f-luw"/>
+                        <outlet property="yearLabel" destination="u77-Cx-QDi" id="85B-lI-CCA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d6M-dR-OLg" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="YfR-ub-E0O" userLabel="Exit" sceneMemberID="exit"/>
