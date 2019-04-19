@@ -12,8 +12,9 @@ class DateHeaderLabel: UILabel {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
-        backgroundColor = UIColor(red: (0xff)/255, green: 0x49/255, blue: 0x7e/255, alpha: 1)
+        backgroundColor = UIColor(red: 0xb2/255, green: 0x4e/255, blue: 0x6a/255, alpha: 0.6)
+//        backgroundColor = UIColor(red: 0xff/255, green: 0x49/255, blue: 0x7e/255, alpha: 0.5)
+
         textColor = .white
         textAlignment = .center
         translatesAutoresizingMaskIntoConstraints = false //enable auto-layout
