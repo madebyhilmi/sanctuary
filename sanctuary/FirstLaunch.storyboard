@@ -796,7 +796,7 @@ Lets start off by getting your name!</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="diL-nB-516" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3596" y="-222"/>
+            <point key="canvasLocation" x="3596" y="-222.41379310344828"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="3Nx-fc-1Jm">
@@ -971,7 +971,7 @@ Lets start off by getting your name!</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nFL-dm-5sY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5902" y="-222"/>
+            <point key="canvasLocation" x="5901.6000000000004" y="-222.41379310344828"/>
         </scene>
         <!--Profile Picture Picked View Controller-->
         <scene sceneID="hnu-qq-h5L">
@@ -1040,7 +1040,7 @@ Lets start off by getting your name!</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bp6-lF-aaW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6646" y="-222"/>
+            <point key="canvasLocation" x="6645.6000000000004" y="-222.41379310344828"/>
         </scene>
         <!--Icebreaker View Controller-->
         <scene sceneID="yiF-bS-cBw">
@@ -1386,7 +1386,7 @@ Lets start off by getting your name!</string>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="BhV-1b-pzs"/>
-        <segue reference="0ZE-0X-REb"/>
-        <segue reference="3HU-HM-OJU"/>
+        <segue reference="cVW-Fs-qLz"/>
+        <segue reference="puz-Mn-ASR"/>
     </inferredMetricsTieBreakers>
 </document>

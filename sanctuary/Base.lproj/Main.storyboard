@@ -58,7 +58,11 @@
                                 </state>
                                 <connections>
                                     <action selector="editProfileClicked:" destination="hqQ-Mb-WYp" eventType="touchUpInside" id="kdW-p1-aIP"/>
+<<<<<<< HEAD
                                     <segue destination="jW5-Of-U3l" kind="presentation" id="TWU-Uy-PY4"/>
+=======
+                                    <segue destination="jW5-Of-U3l" kind="presentation" identifier="toMyProfile" id="Gpn-Zz-m9M"/>
+>>>>>>> master
                                 </connections>
                             </button>
                         </subviews>
@@ -158,6 +162,11 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="96" id="CMh-3a-iw4"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rxt-eI-jH6" userLabel="Icebreaker 2">
                                                 <rect key="frame" x="8" y="564" width="359" height="96"/>
@@ -165,6 +174,11 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="96" id="Pit-ZT-ER8"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yCP-y5-tgy">
                                                 <rect key="frame" x="8" y="668" width="359" height="96"/>
@@ -172,6 +186,11 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="96" id="sVD-rg-cr8"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G8I-6S-pwg">
                                                 <rect key="frame" x="24" y="788" width="327" height="48"/>
@@ -183,6 +202,11 @@
                                                 <state key="normal" title="Edit Profile">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="24"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="editProfile:" destination="jW5-Of-U3l" eventType="touchUpInside" id="H4c-Rn-r1M"/>
                                                 </connections>
