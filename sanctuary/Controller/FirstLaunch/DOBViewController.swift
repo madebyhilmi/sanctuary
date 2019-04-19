@@ -11,7 +11,9 @@ import UIKit
 class DOBViewController: FirstLaunchViewController {
     
     var dateOfBirth: Date?
-
+    @IBOutlet weak var yearLabel: UILabel!
+    @IBOutlet weak var nextButton: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +39,14 @@ class DOBViewController: FirstLaunchViewController {
 
     @IBAction func datePickerChanged(_ sender: UIDatePicker) {
         self.dateOfBirth = sender.date
+        let year = Calendar.current.component(.year, from: Date()) - Calendar.current.component(.year, from: dateOfBirth ?? Date())
+        if (year < 18){
+            nextButton.isEnabled = false
+            yearLabel.text = "You must be over 18, to use Sanctuary!"
+        }else{
+            nextButton.isEnabled = true
+            yearLabel.text = "I am " + String(year) + " years old!"
+        }
     }
     
     
