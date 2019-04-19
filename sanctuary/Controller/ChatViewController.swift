@@ -68,7 +68,26 @@ class ChatViewController: UITableViewController {
         let insets = UIEdgeInsets(top: 0, left: 0, bottom: 30, right: 0)
         tableView.contentInset = insets
         
+        setUpClearFixes()
+        
+        
         tableView.keyboardDismissMode = .interactive
+        
+    }
+    
+    //Prevent chat from showing up below and above the chat screen area
+    func setUpClearFixes() {
+        let bottomClearFixView = UIView()
+        bottomClearFixView.backgroundColor = .white
+        bottomClearFixView.translatesAutoresizingMaskIntoConstraints = false
+        
+        navigationController?.view.addSubview(bottomClearFixView)
+        
+        bottomClearFixView.bottomAnchor.constraint(equalTo: (navigationController?.view.bottomAnchor)!).isActive = true
+        bottomClearFixView.widthAnchor.constraint(equalTo: (navigationController?.view.widthAnchor)!).isActive = true
+        bottomClearFixView.heightAnchor.constraint(equalToConstant: 30).isActive = true
+    
+        navigationController?.view.backgroundColor = .white
         
     }
     

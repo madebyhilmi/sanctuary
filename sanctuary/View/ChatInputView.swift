@@ -27,7 +27,7 @@ class ChatInputView: UIView, UITextFieldDelegate {
     let uploadImageView: UIImageView = {
         let uploadImageView = UIImageView()
         uploadImageView.isUserInteractionEnabled = true
-        uploadImageView.image = UIImage(named: "upload_image_icon")
+        uploadImageView.image = UIImage(named: "exchange")
         uploadImageView.translatesAutoresizingMaskIntoConstraints = false
         return uploadImageView
     }()
@@ -41,10 +41,10 @@ class ChatInputView: UIView, UITextFieldDelegate {
         
         addSubview(uploadImageView)
         //x,y,w,h
-        uploadImageView.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
+        uploadImageView.leftAnchor.constraint(equalTo: leftAnchor, constant: 5).isActive = true
         uploadImageView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-        uploadImageView.widthAnchor.constraint(equalToConstant: 44).isActive = true
-        uploadImageView.heightAnchor.constraint(equalToConstant: 44).isActive = true
+        uploadImageView.widthAnchor.constraint(equalToConstant: 26).isActive = true
+        uploadImageView.heightAnchor.constraint(equalToConstant: 26).isActive = true
         
         
         sendButton.setTitle("Send", for: .normal)
