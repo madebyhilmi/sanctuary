@@ -59,6 +59,7 @@
                                 </state>
                                 <connections>
                                     <action selector="editProfileClicked:" destination="hqQ-Mb-WYp" eventType="touchUpInside" id="kdW-p1-aIP"/>
+                                    <segue destination="jW5-Of-U3l" kind="presentation" id="TWU-Uy-PY4"/>
                                 </connections>
                             </button>
                         </subviews>
