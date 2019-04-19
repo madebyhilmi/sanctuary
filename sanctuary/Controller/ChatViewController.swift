@@ -39,7 +39,18 @@ class ChatViewController: UITableViewController {
         profileBtn.setImage(profileImg, for: .normal)
         profileBtn.frame = CGRect(x: 0, y: 0, width: 5, height: 5)
         
-        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: profileBtn)
+        //The image of the user you are chatting with
+        let profileImageView = UIImageView()
+        profileImageView.isUserInteractionEnabled = true
+        profileImageView.image = UIImage(named: "jessica")
+        profileImageView.translatesAutoresizingMaskIntoConstraints = false
+        profileImageView.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        profileImageView.widthAnchor.constraint(equalToConstant: 50).isActive = true
+
+       // let profileContainer = UIView()
+        
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: profileImageView)
         
         
         let unmatchBtn = UIButton(type: .system)
@@ -57,12 +68,26 @@ class ChatViewController: UITableViewController {
         let insets = UIEdgeInsets(top: 0, left: 0, bottom: 30, right: 0)
         tableView.contentInset = insets
         
-        
-        
-        
+        setUpClearFixes()
         
         
         tableView.keyboardDismissMode = .interactive
+        
+    }
+    
+    //Prevent chat from showing up below and above the chat screen area
+    func setUpClearFixes() {
+        let bottomClearFixView = UIView()
+        bottomClearFixView.backgroundColor = .white
+        bottomClearFixView.translatesAutoresizingMaskIntoConstraints = false
+        
+        navigationController?.view.addSubview(bottomClearFixView)
+        
+        bottomClearFixView.bottomAnchor.constraint(equalTo: (navigationController?.view.bottomAnchor)!).isActive = true
+        bottomClearFixView.widthAnchor.constraint(equalTo: (navigationController?.view.widthAnchor)!).isActive = true
+        bottomClearFixView.heightAnchor.constraint(equalToConstant: 30).isActive = true
+    
+        navigationController?.view.backgroundColor = .white
         
     }
     
