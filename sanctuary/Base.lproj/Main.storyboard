@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ji9-VY-UbU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ji9-VY-UbU">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -22,8 +22,15 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="13U-gX-956">
                                 <rect key="frame" x="0.0" y="88" width="375" height="630"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wHB-OJ-xOf">
-                                        <rect key="frame" x="85.666666666666686" y="286.66666666666669" width="204" height="57"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bird-white" translatesAutoresizingMaskIntoConstraints="NO" id="lrE-RC-eMc">
+                                        <rect key="frame" x="90.666666666666686" y="24" width="194" height="194"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="lrE-RC-eMc" secondAttribute="height" multiplier="1:1" id="pyX-wR-6rx"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wHB-OJ-xOf">
+                                        <rect key="frame" x="85.666666666666686" y="401" width="204" height="57"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="37"/>
                                         <state key="normal" title="Tap to Match">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -32,27 +39,19 @@
                                             <segue destination="Tbt-pF-mUB" kind="show" id="sVy-d6-VeH"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bird-white" translatesAutoresizingMaskIntoConstraints="NO" id="lrE-RC-eMc">
-                                        <rect key="frame" x="24" y="8" width="327" height="327"/>
-                                        <gestureRecognizers/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="lrE-RC-eMc" secondAttribute="height" multiplier="1:1" id="pyX-wR-6rx"/>
-                                        </constraints>
-                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstItem="wHB-OJ-xOf" firstAttribute="centerX" secondItem="13U-gX-956" secondAttribute="centerX" id="16R-L6-XfX"/>
-                                    <constraint firstItem="lrE-RC-eMc" firstAttribute="top" secondItem="13U-gX-956" secondAttribute="top" constant="8" id="BO6-zy-fAb"/>
-                                    <constraint firstAttribute="trailing" secondItem="lrE-RC-eMc" secondAttribute="trailing" constant="24" id="I5e-wu-hnu"/>
-                                    <constraint firstItem="wHB-OJ-xOf" firstAttribute="centerY" secondItem="13U-gX-956" secondAttribute="centerY" id="Pet-zB-mIv"/>
-                                    <constraint firstItem="lrE-RC-eMc" firstAttribute="leading" secondItem="13U-gX-956" secondAttribute="leading" constant="24" id="QZS-oe-46h"/>
-                                    <constraint firstItem="lrE-RC-eMc" firstAttribute="centerX" secondItem="13U-gX-956" secondAttribute="centerX" id="g0F-46-sMU"/>
+                                    <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="wHB-OJ-xOf" secondAttribute="bottom" priority="250" constant="172" id="7qe-4b-6N8"/>
+                                    <constraint firstAttribute="trailing" secondItem="lrE-RC-eMc" secondAttribute="trailing" constant="90.5" id="QIE-ni-B0V"/>
+                                    <constraint firstItem="lrE-RC-eMc" firstAttribute="top" secondItem="13U-gX-956" secondAttribute="top" constant="24" id="Ymc-hE-gIk"/>
+                                    <constraint firstItem="wHB-OJ-xOf" firstAttribute="centerX" secondItem="13U-gX-956" secondAttribute="centerX" id="uY1-Xw-W4Z"/>
+                                    <constraint firstItem="lrE-RC-eMc" firstAttribute="leading" secondItem="13U-gX-956" secondAttribute="leading" constant="90.5" id="xhN-B0-2a4"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Abh-Up-xNj">
-                                <rect key="frame" x="141" y="726" width="93" height="36"/>
+                                <rect key="frame" x="16" y="726" width="343" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Edit Profile">
                                     <color key="titleColor" red="0.99998790029999995" green="0.9999936223" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -67,12 +66,12 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Abh-Up-xNj" firstAttribute="top" secondItem="13U-gX-956" secondAttribute="bottom" constant="8" id="2D3-qv-lHG"/>
+                            <constraint firstItem="Abh-Up-xNj" firstAttribute="leading" secondItem="8cd-1A-TL5" secondAttribute="leading" constant="16" id="36G-uj-0xK"/>
                             <constraint firstItem="8cd-1A-TL5" firstAttribute="bottom" secondItem="Abh-Up-xNj" secondAttribute="bottom" constant="16" id="LT3-fP-eBd"/>
-                            <constraint firstItem="8cd-1A-TL5" firstAttribute="trailing" secondItem="Abh-Up-xNj" secondAttribute="trailing" constant="141" id="MZn-IX-ZtN"/>
                             <constraint firstItem="13U-gX-956" firstAttribute="trailing" secondItem="8cd-1A-TL5" secondAttribute="trailing" id="YNI-qp-CiZ"/>
                             <constraint firstItem="13U-gX-956" firstAttribute="leading" secondItem="8cd-1A-TL5" secondAttribute="leading" id="baz-nR-Axu"/>
-                            <constraint firstItem="Abh-Up-xNj" firstAttribute="leading" secondItem="8cd-1A-TL5" secondAttribute="leading" constant="141" id="ied-qX-MwR"/>
                             <constraint firstItem="13U-gX-956" firstAttribute="top" secondItem="8cd-1A-TL5" secondAttribute="top" id="sMV-dN-aMy"/>
+                            <constraint firstItem="8cd-1A-TL5" firstAttribute="trailing" secondItem="Abh-Up-xNj" secondAttribute="trailing" constant="16" id="zUJ-S2-XtO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8cd-1A-TL5"/>
                     </view>
