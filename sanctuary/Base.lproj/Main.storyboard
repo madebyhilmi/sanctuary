@@ -58,11 +58,7 @@
                                 </state>
                                 <connections>
                                     <action selector="editProfileClicked:" destination="hqQ-Mb-WYp" eventType="touchUpInside" id="kdW-p1-aIP"/>
-<<<<<<< HEAD
-                                    <segue destination="jW5-Of-U3l" kind="presentation" id="TWU-Uy-PY4"/>
-=======
                                     <segue destination="jW5-Of-U3l" kind="presentation" identifier="toMyProfile" id="Gpn-Zz-m9M"/>
->>>>>>> master
                                 </connections>
                             </button>
                         </subviews>
